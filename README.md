@@ -44,7 +44,8 @@ Now, lbsnstructure should be available through your python path and directly lin
 
 For the releases available, see the [tags on this repository](/../tags). 
 The versioning (major.minor.patch) is automated using [python-semantic-release](https://github.com/relekang/python-semantic-release).
-Commit messages that follow the [Angular Commit Message Conventions](https://github.com/angular/angular.js/blob/master/DEVELOPERS.md#-git-commit-guidelines) will be automatically interpreted, followed by version bumps if necessary. Examples:  
+Commit messages that follow the [Angular Commit Message Conventions](https://github.com/angular/angular.js/blob/master/DEVELOPERS.md#-git-commit-guidelines) will be automatically interpreted, 
+followed by version bumps if necessary. 
 
 ## License
 
