@@ -32,7 +32,7 @@ For development & testing, make a local clone of this repository
 git clone git@gitlab.vgiscience.de:lbsn/concept.git
 ```
 
-Go to subfolder `examples\python` and symlink the folder to your  
+Go to subfolder `examples\python` and (e.g.) symlink the folder to your  
 Python's site-packages folder with:  
 ```shell
 python setup.py develop
