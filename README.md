@@ -1,3 +1,5 @@
+![version](https://lbsn.vgiscience.org/concept/version.svg) ![pipeline](https://lbsn.vgiscience.org/concept/pipeline.svg)
+
 # LBSNSTRUCTURE
 
 A python compiled version of the [common location based social network (LBSN) data structure concept](https://gitlab.vgiscience.de/lbsn/concept) (ProtoBuf) to handle cross network Social Media data in Python.
