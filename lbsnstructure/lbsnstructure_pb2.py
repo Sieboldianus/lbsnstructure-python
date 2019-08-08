@@ -18,18 +18,18 @@ from google.protobuf import timestamp_pb2 as google_dot_protobuf_dot_timestamp__
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='lbsnstructure/lbsnstructure.proto',
-  package='',
+  package='lbsn.structure',
   syntax='proto3',
   serialized_options=None,
-  serialized_pb=_b('\n!lbsnstructure/lbsnstructure.proto\x1a\x1fgoogle/protobuf/timestamp.proto\"\xa2\x01\n\nlbsnOrigin\x12\'\n\torigin_id\x18\x01 \x01(\x0e\x32\x14.lbsnOrigin.OriginID\x12\x0c\n\x04name\x18\x02 \x01(\t\"]\n\x08OriginID\x12\x0b\n\x07UNKNOWN\x10\x00\x12\r\n\tINSTAGRAM\x10\x01\x12\n\n\x06\x46LICKR\x10\x02\x12\x0b\n\x07TWITTER\x10\x03\x12\x0c\n\x08\x46\x41\x43\x45\x42OOK\x10\x04\x12\x0e\n\nFOURSQUARE\x10\x05\"7\n\x0c\x43ompositeKey\x12\x1b\n\x06origin\x18\x01 \x01(\x0b\x32\x0b.lbsnOrigin\x12\n\n\x02id\x18\x02 \x01(\t\"[\n\x0fRelationshipKey\x12\"\n\x0brelation_to\x18\x01 \x01(\x0b\x32\r.CompositeKey\x12$\n\rrelation_from\x18\x02 \x01(\x0b\x32\r.CompositeKey\"\xa5\x07\n\x08lbsnPost\x12\x1b\n\x04pkey\x18\x01 \x01(\x0b\x32\r.CompositeKey\x12\x13\n\x0bpost_latlng\x18\x02 \x01(\t\x12!\n\nplace_pkey\x18\x03 \x01(\x0b\x32\r.CompositeKey\x12 \n\tcity_pkey\x18\x04 \x01(\x0b\x32\r.CompositeKey\x12#\n\x0c\x63ountry_pkey\x18\x05 \x01(\x0b\x32\r.CompositeKey\x12 \n\tuser_pkey\x18\x06 \x01(\x0b\x32\r.CompositeKey\x12\x35\n\x11post_publish_date\x18\x07 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x11\n\tpost_body\x18\x08 \x01(\t\x12\x33\n\x10post_geoaccuracy\x18\t \x01(\x0e\x32\x19.lbsnPost.PostGeoaccuracy\x12)\n\x12user_mentions_pkey\x18\n \x03(\x0b\x32\r.CompositeKey\x12\x10\n\x08hashtags\x18\x0b \x03(\t\x12\r\n\x05\x65moji\x18\x0c \x03(\t\x12\x17\n\x0fpost_like_count\x18\r \x01(\x03\x12\x1a\n\x12post_comment_count\x18\x0e \x01(\x03\x12\x18\n\x10post_views_count\x18\x0f \x01(\x03\x12\x12\n\npost_title\x18\x10 \x01(\t\x12\x34\n\x10post_create_date\x18\x11 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x1a\n\x12post_thumbnail_url\x18\x12 \x01(\t\x12\x10\n\x08post_url\x18\x13 \x01(\t\x12%\n\tpost_type\x18\x14 \x01(\x0e\x32\x12.lbsnPost.PostType\x12\x13\n\x0bpost_filter\x18\x15 \x01(\t\x12\x18\n\x10post_quote_count\x18\x16 \x01(\x03\x12\x18\n\x10post_share_count\x18\x17 \x01(\x03\x12\x14\n\x0cinput_source\x18\x18 \x01(\t\x12 \n\rpost_language\x18\x19 \x01(\x0b\x32\t.Language\x12\x1c\n\x14post_content_license\x18\x1a \x01(\x05\"L\n\x0fPostGeoaccuracy\x12\x0b\n\x07UNKNOWN\x10\x00\x12\n\n\x06LATLNG\x10\x01\x12\t\n\x05PLACE\x10\x02\x12\x08\n\x04\x43ITY\x10\x03\x12\x0b\n\x07\x43OUNTRY\x10\x04\"5\n\x08PostType\x12\x08\n\x04TEXT\x10\x00\x12\t\n\x05IMAGE\x10\x01\x12\t\n\x05VIDEO\x10\x02\x12\t\n\x05OTHER\x10\x03\"\x87\x04\n\x08lbsnUser\x12\x1b\n\x04pkey\x18\x01 \x01(\x0b\x32\r.CompositeKey\x12\x11\n\tuser_name\x18\x02 \x01(\t\x12\x15\n\ruser_fullname\x18\x03 \x01(\t\x12\x0f\n\x07\x66ollows\x18\x04 \x01(\x03\x12\x10\n\x08\x66ollowed\x18\x05 \x01(\x03\x12\x13\n\x0bgroup_count\x18\x06 \x01(\x03\x12\x11\n\tbiography\x18\x07 \x01(\t\x12\x12\n\npost_count\x18\x08 \x01(\x03\x12\x0b\n\x03url\x18\t \x01(\t\x12\x12\n\nis_private\x18\n \x01(\x08\x12\x14\n\x0cis_available\x18\x0b \x01(\x08\x12 \n\ruser_language\x18\x0c \x01(\x0b\x32\t.Language\x12\x15\n\ruser_location\x18\r \x01(\t\x12\x1a\n\x12user_location_geom\x18\x0e \x01(\t\x12\x13\n\x0bliked_count\x18\x0f \x01(\x03\x12\x30\n\x0c\x61\x63tive_since\x18\x10 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x19\n\x11profile_image_url\x18\x11 \x01(\t\x12\x15\n\ruser_timezone\x18\x12 \x01(\t\x12\x17\n\x0fuser_utc_offset\x18\x13 \x01(\x11\x12\x1a\n\x12user_groups_member\x18\x14 \x03(\t\x12\x1b\n\x13user_groups_follows\x18\x15 \x03(\t\"\xdb\x01\n\rlbsnUserGroup\x12\x1b\n\x04pkey\x18\x01 \x01(\x0b\x32\r.CompositeKey\x12\x16\n\x0eusergroup_name\x18\x02 \x01(\t\x12\x1d\n\x15usergroup_description\x18\x03 \x01(\t\x12\x14\n\x0cmember_count\x18\x04 \x01(\x03\x12\x38\n\x14usergroup_createdate\x18\x05 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12&\n\x0fuser_owner_pkey\x18\x06 \x01(\x0b\x32\r.CompositeKey\"\xd1\x02\n\tlbsnPlace\x12\x1b\n\x04pkey\x18\x01 \x01(\x0b\x32\r.CompositeKey\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x19\n\x11name_alternatives\x18\x03 \x03(\t\x12\x12\n\npost_count\x18\x04 \x01(\x03\x12\x0b\n\x03url\x18\x05 \x01(\t\x12\x13\n\x0bgeom_center\x18\x06 \x01(\t\x12\x11\n\tgeom_area\x18\x07 \x01(\t\x12 \n\tcity_pkey\x18\x08 \x01(\x0b\x32\r.CompositeKey\x12\x19\n\x11place_description\x18\t \x01(\t\x12\x15\n\rplace_website\x18\n \x01(\t\x12\x13\n\x0bplace_phone\x18\x0b \x01(\t\x12\x0f\n\x07\x61\x64\x64ress\x18\x0c \x01(\t\x12\x10\n\x08zip_code\x18\r \x01(\t\x12\x15\n\rcheckin_count\x18\x0e \x01(\x03\x12\x12\n\nlike_count\x18\x0f \x01(\x03\"\xbc\x01\n\x08lbsnCity\x12\x1b\n\x04pkey\x18\x01 \x01(\x0b\x32\r.CompositeKey\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x19\n\x11name_alternatives\x18\x03 \x03(\t\x12\x10\n\x08sub_type\x18\x04 \x01(\t\x12\x0b\n\x03url\x18\x05 \x01(\t\x12\x13\n\x0bgeom_center\x18\x06 \x01(\t\x12\x11\n\tgeom_area\x18\x07 \x01(\t\x12#\n\x0c\x63ountry_pkey\x18\x08 \x01(\x0b\x32\r.CompositeKey\"\x88\x01\n\x0blbsnCountry\x12\x1b\n\x04pkey\x18\x01 \x01(\x0b\x32\r.CompositeKey\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x19\n\x11name_alternatives\x18\x03 \x03(\t\x12\x0b\n\x03url\x18\x04 \x01(\t\x12\x13\n\x0bgeom_center\x18\x05 \x01(\t\x12\x11\n\tgeom_area\x18\x06 \x01(\t\"\xf6\x03\n\x10lbsnPostReaction\x12\x1b\n\x04pkey\x18\x01 \x01(\x0b\x32\r.CompositeKey\x12 \n\tuser_pkey\x18\x02 \x01(\x0b\x32\r.CompositeKey\x12*\n\x13referencedPost_pkey\x18\x03 \x01(\x0b\x32\r.CompositeKey\x12\x32\n\x1breferencedPostreaction_pkey\x18\x04 \x01(\x0b\x32\r.CompositeKey\x12\x17\n\x0freaction_latlng\x18\x05 \x01(\t\x12\x35\n\rreaction_type\x18\x06 \x01(\x0e\x32\x1e.lbsnPostReaction.ReactionType\x12\x31\n\rreaction_date\x18\x07 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x18\n\x10reaction_content\x18\x08 \x01(\t\x12\x1b\n\x13reaction_like_count\x18\t \x01(\x03\x12)\n\x12user_mentions_pkey\x18\n \x03(\x0b\x32\r.CompositeKey\"^\n\x0cReactionType\x12\x0b\n\x07UNKNOWN\x10\x00\x12\t\n\x05SHARE\x10\x01\x12\x0b\n\x07\x43OMMENT\x10\x02\x12\t\n\x05QUOTE\x10\x03\x12\x08\n\x04LIKE\x10\x04\x12\t\n\x05\x45MOJI\x10\x05\x12\t\n\x05OTHER\x10\x06\"\xab\x02\n\x10lbsnRelationship\x12\x1e\n\x04pkey\x18\x01 \x01(\x0b\x32\x10.RelationshipKey\x12=\n\x11relationship_type\x18\x02 \x01(\x0e\x32\".lbsnRelationship.RelationshipType\"\xb7\x01\n\x10RelationshipType\x12\x0b\n\x07UNKNOWN\x10\x00\x12\x0c\n\x08isFRIEND\x10\x01\x12\x0f\n\x0bisCONNECTED\x10\x02\x12\x0b\n\x07isEQUAL\x10\x03\x12\x0b\n\x07inGROUP\x10\x04\x12\x10\n\x0c\x66ollowsGROUP\x10\x05\x12\x0f\n\x0binCOMMUNITY\x10\x06\x12\x11\n\rMENTIONS_USER\x10\x07\x12\x0e\n\nhasHASHTAG\x10\x08\x12\x0c\n\x08hasEMOJI\x10\t\x12\t\n\x05OTHER\x10\n\"J\n\x08Language\x12\x16\n\x0elanguage_short\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x18\n\x10language_name_de\x18\x03 \x01(\tb\x06proto3')
+  serialized_pb=_b('\n!lbsnstructure/lbsnstructure.proto\x12\x0elbsn.structure\x1a\x1fgoogle/protobuf/timestamp.proto\"\xa9\x01\n\x06Origin\x12\x32\n\torigin_id\x18\x01 \x01(\x0e\x32\x1f.lbsn.structure.Origin.OriginID\x12\x0c\n\x04name\x18\x02 \x01(\t\"]\n\x08OriginID\x12\x0b\n\x07UNKNOWN\x10\x00\x12\r\n\tINSTAGRAM\x10\x01\x12\n\n\x06\x46LICKR\x10\x02\x12\x0b\n\x07TWITTER\x10\x03\x12\x0c\n\x08\x46\x41\x43\x45\x42OOK\x10\x04\x12\x0e\n\nFOURSQUARE\x10\x05\"B\n\x0c\x43ompositeKey\x12&\n\x06origin\x18\x01 \x01(\x0b\x32\x16.lbsn.structure.Origin\x12\n\n\x02id\x18\x02 \x01(\t\"y\n\x0fRelationshipKey\x12\x31\n\x0brelation_to\x18\x01 \x01(\x0b\x32\x1c.lbsn.structure.CompositeKey\x12\x33\n\rrelation_from\x18\x02 \x01(\x0b\x32\x1c.lbsn.structure.CompositeKey\"\xa0\x08\n\x04Post\x12*\n\x04pkey\x18\x01 \x01(\x0b\x32\x1c.lbsn.structure.CompositeKey\x12\x13\n\x0bpost_latlng\x18\x02 \x01(\t\x12\x30\n\nplace_pkey\x18\x03 \x01(\x0b\x32\x1c.lbsn.structure.CompositeKey\x12/\n\tcity_pkey\x18\x04 \x01(\x0b\x32\x1c.lbsn.structure.CompositeKey\x12\x32\n\x0c\x63ountry_pkey\x18\x05 \x01(\x0b\x32\x1c.lbsn.structure.CompositeKey\x12/\n\tuser_pkey\x18\x06 \x01(\x0b\x32\x1c.lbsn.structure.CompositeKey\x12\x35\n\x11post_publish_date\x18\x07 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x11\n\tpost_body\x18\x08 \x01(\t\x12>\n\x10post_geoaccuracy\x18\t \x01(\x0e\x32$.lbsn.structure.Post.PostGeoaccuracy\x12\x38\n\x12user_mentions_pkey\x18\n \x03(\x0b\x32\x1c.lbsn.structure.CompositeKey\x12\x10\n\x08hashtags\x18\x0b \x03(\t\x12\r\n\x05\x65moji\x18\x0c \x03(\t\x12\x17\n\x0fpost_like_count\x18\r \x01(\x03\x12\x1a\n\x12post_comment_count\x18\x0e \x01(\x03\x12\x18\n\x10post_views_count\x18\x0f \x01(\x03\x12\x12\n\npost_title\x18\x10 \x01(\t\x12\x34\n\x10post_create_date\x18\x11 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x1a\n\x12post_thumbnail_url\x18\x12 \x01(\t\x12\x10\n\x08post_url\x18\x13 \x01(\t\x12\x30\n\tpost_type\x18\x14 \x01(\x0e\x32\x1d.lbsn.structure.Post.PostType\x12\x13\n\x0bpost_filter\x18\x15 \x01(\t\x12\x18\n\x10post_quote_count\x18\x16 \x01(\x03\x12\x18\n\x10post_share_count\x18\x17 \x01(\x03\x12\x14\n\x0cinput_source\x18\x18 \x01(\t\x12/\n\rpost_language\x18\x19 \x01(\x0b\x32\x18.lbsn.structure.Language\x12\x1c\n\x14post_content_license\x18\x1a \x01(\x05\"L\n\x0fPostGeoaccuracy\x12\x0b\n\x07UNKNOWN\x10\x00\x12\n\n\x06LATLNG\x10\x01\x12\t\n\x05PLACE\x10\x02\x12\x08\n\x04\x43ITY\x10\x03\x12\x0b\n\x07\x43OUNTRY\x10\x04\"5\n\x08PostType\x12\x08\n\x04TEXT\x10\x00\x12\t\n\x05IMAGE\x10\x01\x12\t\n\x05VIDEO\x10\x02\x12\t\n\x05OTHER\x10\x03\"\xa1\x04\n\x04User\x12*\n\x04pkey\x18\x01 \x01(\x0b\x32\x1c.lbsn.structure.CompositeKey\x12\x11\n\tuser_name\x18\x02 \x01(\t\x12\x15\n\ruser_fullname\x18\x03 \x01(\t\x12\x0f\n\x07\x66ollows\x18\x04 \x01(\x03\x12\x10\n\x08\x66ollowed\x18\x05 \x01(\x03\x12\x13\n\x0bgroup_count\x18\x06 \x01(\x03\x12\x11\n\tbiography\x18\x07 \x01(\t\x12\x12\n\npost_count\x18\x08 \x01(\x03\x12\x0b\n\x03url\x18\t \x01(\t\x12\x12\n\nis_private\x18\n \x01(\x08\x12\x14\n\x0cis_available\x18\x0b \x01(\x08\x12/\n\ruser_language\x18\x0c \x01(\x0b\x32\x18.lbsn.structure.Language\x12\x15\n\ruser_location\x18\r \x01(\t\x12\x1a\n\x12user_location_geom\x18\x0e \x01(\t\x12\x13\n\x0bliked_count\x18\x0f \x01(\x03\x12\x30\n\x0c\x61\x63tive_since\x18\x10 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x19\n\x11profile_image_url\x18\x11 \x01(\t\x12\x15\n\ruser_timezone\x18\x12 \x01(\t\x12\x17\n\x0fuser_utc_offset\x18\x13 \x01(\x11\x12\x1a\n\x12user_groups_member\x18\x14 \x03(\t\x12\x1b\n\x13user_groups_follows\x18\x15 \x03(\t\"\xf5\x01\n\tUserGroup\x12*\n\x04pkey\x18\x01 \x01(\x0b\x32\x1c.lbsn.structure.CompositeKey\x12\x16\n\x0eusergroup_name\x18\x02 \x01(\t\x12\x1d\n\x15usergroup_description\x18\x03 \x01(\t\x12\x14\n\x0cmember_count\x18\x04 \x01(\x03\x12\x38\n\x14usergroup_createdate\x18\x05 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x35\n\x0fuser_owner_pkey\x18\x06 \x01(\x0b\x32\x1c.lbsn.structure.CompositeKey\"\xeb\x02\n\x05Place\x12*\n\x04pkey\x18\x01 \x01(\x0b\x32\x1c.lbsn.structure.CompositeKey\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x19\n\x11name_alternatives\x18\x03 \x03(\t\x12\x12\n\npost_count\x18\x04 \x01(\x03\x12\x0b\n\x03url\x18\x05 \x01(\t\x12\x13\n\x0bgeom_center\x18\x06 \x01(\t\x12\x11\n\tgeom_area\x18\x07 \x01(\t\x12/\n\tcity_pkey\x18\x08 \x01(\x0b\x32\x1c.lbsn.structure.CompositeKey\x12\x19\n\x11place_description\x18\t \x01(\t\x12\x15\n\rplace_website\x18\n \x01(\t\x12\x13\n\x0bplace_phone\x18\x0b \x01(\t\x12\x0f\n\x07\x61\x64\x64ress\x18\x0c \x01(\t\x12\x10\n\x08zip_code\x18\r \x01(\t\x12\x15\n\rcheckin_count\x18\x0e \x01(\x03\x12\x12\n\nlike_count\x18\x0f \x01(\x03\"\xd6\x01\n\x04\x43ity\x12*\n\x04pkey\x18\x01 \x01(\x0b\x32\x1c.lbsn.structure.CompositeKey\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x19\n\x11name_alternatives\x18\x03 \x03(\t\x12\x10\n\x08sub_type\x18\x04 \x01(\t\x12\x0b\n\x03url\x18\x05 \x01(\t\x12\x13\n\x0bgeom_center\x18\x06 \x01(\t\x12\x11\n\tgeom_area\x18\x07 \x01(\t\x12\x32\n\x0c\x63ountry_pkey\x18\x08 \x01(\x0b\x32\x1c.lbsn.structure.CompositeKey\"\x93\x01\n\x07\x43ountry\x12*\n\x04pkey\x18\x01 \x01(\x0b\x32\x1c.lbsn.structure.CompositeKey\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x19\n\x11name_alternatives\x18\x03 \x03(\t\x12\x0b\n\x03url\x18\x04 \x01(\t\x12\x13\n\x0bgeom_center\x18\x05 \x01(\t\x12\x11\n\tgeom_area\x18\x06 \x01(\t\"\xc8\x04\n\x0cPostReaction\x12*\n\x04pkey\x18\x01 \x01(\x0b\x32\x1c.lbsn.structure.CompositeKey\x12/\n\tuser_pkey\x18\x02 \x01(\x0b\x32\x1c.lbsn.structure.CompositeKey\x12\x39\n\x13referencedPost_pkey\x18\x03 \x01(\x0b\x32\x1c.lbsn.structure.CompositeKey\x12\x41\n\x1breferencedPostreaction_pkey\x18\x04 \x01(\x0b\x32\x1c.lbsn.structure.CompositeKey\x12\x17\n\x0freaction_latlng\x18\x05 \x01(\t\x12@\n\rreaction_type\x18\x06 \x01(\x0e\x32).lbsn.structure.PostReaction.ReactionType\x12\x31\n\rreaction_date\x18\x07 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x18\n\x10reaction_content\x18\x08 \x01(\t\x12\x1b\n\x13reaction_like_count\x18\t \x01(\x03\x12\x38\n\x12user_mentions_pkey\x18\n \x03(\x0b\x32\x1c.lbsn.structure.CompositeKey\"^\n\x0cReactionType\x12\x0b\n\x07UNKNOWN\x10\x00\x12\t\n\x05SHARE\x10\x01\x12\x0b\n\x07\x43OMMENT\x10\x02\x12\t\n\x05QUOTE\x10\x03\x12\x08\n\x04LIKE\x10\x04\x12\t\n\x05\x45MOJI\x10\x05\x12\t\n\x05OTHER\x10\x06\"\xc1\x02\n\x0cRelationship\x12-\n\x04pkey\x18\x01 \x01(\x0b\x32\x1f.lbsn.structure.RelationshipKey\x12H\n\x11relationship_type\x18\x02 \x01(\x0e\x32-.lbsn.structure.Relationship.RelationshipType\"\xb7\x01\n\x10RelationshipType\x12\x0b\n\x07UNKNOWN\x10\x00\x12\x0c\n\x08isFRIEND\x10\x01\x12\x0f\n\x0bisCONNECTED\x10\x02\x12\x0b\n\x07isEQUAL\x10\x03\x12\x0b\n\x07inGROUP\x10\x04\x12\x10\n\x0c\x66ollowsGROUP\x10\x05\x12\x0f\n\x0binCOMMUNITY\x10\x06\x12\x11\n\rMENTIONS_USER\x10\x07\x12\x0e\n\nhasHASHTAG\x10\x08\x12\x0c\n\x08hasEMOJI\x10\t\x12\t\n\x05OTHER\x10\n\"J\n\x08Language\x12\x16\n\x0elanguage_short\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x18\n\x10language_name_de\x18\x03 \x01(\tb\x06proto3')
   ,
   dependencies=[google_dot_protobuf_dot_timestamp__pb2.DESCRIPTOR,])
 
 
 
-_LBSNORIGIN_ORIGINID = _descriptor.EnumDescriptor(
+_ORIGIN_ORIGINID = _descriptor.EnumDescriptor(
   name='OriginID',
-  full_name='lbsnOrigin.OriginID',
+  full_name='lbsn.structure.Origin.OriginID',
   filename=None,
   file=DESCRIPTOR,
   values=[
@@ -60,14 +60,14 @@ _LBSNORIGIN_ORIGINID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=140,
-  serialized_end=233,
+  serialized_start=163,
+  serialized_end=256,
 )
-_sym_db.RegisterEnumDescriptor(_LBSNORIGIN_ORIGINID)
+_sym_db.RegisterEnumDescriptor(_ORIGIN_ORIGINID)
 
-_LBSNPOST_POSTGEOACCURACY = _descriptor.EnumDescriptor(
+_POST_POSTGEOACCURACY = _descriptor.EnumDescriptor(
   name='PostGeoaccuracy',
-  full_name='lbsnPost.PostGeoaccuracy',
+  full_name='lbsn.structure.Post.PostGeoaccuracy',
   filename=None,
   file=DESCRIPTOR,
   values=[
@@ -94,14 +94,14 @@ _LBSNPOST_POSTGEOACCURACY = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=1188,
-  serialized_end=1264,
+  serialized_start=1375,
+  serialized_end=1451,
 )
-_sym_db.RegisterEnumDescriptor(_LBSNPOST_POSTGEOACCURACY)
+_sym_db.RegisterEnumDescriptor(_POST_POSTGEOACCURACY)
 
-_LBSNPOST_POSTTYPE = _descriptor.EnumDescriptor(
+_POST_POSTTYPE = _descriptor.EnumDescriptor(
   name='PostType',
-  full_name='lbsnPost.PostType',
+  full_name='lbsn.structure.Post.PostType',
   filename=None,
   file=DESCRIPTOR,
   values=[
@@ -124,14 +124,14 @@ _LBSNPOST_POSTTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=1266,
-  serialized_end=1319,
+  serialized_start=1453,
+  serialized_end=1506,
 )
-_sym_db.RegisterEnumDescriptor(_LBSNPOST_POSTTYPE)
+_sym_db.RegisterEnumDescriptor(_POST_POSTTYPE)
 
-_LBSNPOSTREACTION_REACTIONTYPE = _descriptor.EnumDescriptor(
+_POSTREACTION_REACTIONTYPE = _descriptor.EnumDescriptor(
   name='ReactionType',
-  full_name='lbsnPostReaction.ReactionType',
+  full_name='lbsn.structure.PostReaction.ReactionType',
   filename=None,
   file=DESCRIPTOR,
   values=[
@@ -166,14 +166,14 @@ _LBSNPOSTREACTION_REACTIONTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=3144,
-  serialized_end=3238,
+  serialized_start=3528,
+  serialized_end=3622,
 )
-_sym_db.RegisterEnumDescriptor(_LBSNPOSTREACTION_REACTIONTYPE)
+_sym_db.RegisterEnumDescriptor(_POSTREACTION_REACTIONTYPE)
 
-_LBSNRELATIONSHIP_RELATIONSHIPTYPE = _descriptor.EnumDescriptor(
+_RELATIONSHIP_RELATIONSHIPTYPE = _descriptor.EnumDescriptor(
   name='RelationshipType',
-  full_name='lbsnRelationship.RelationshipType',
+  full_name='lbsn.structure.Relationship.RelationshipType',
   filename=None,
   file=DESCRIPTOR,
   values=[
@@ -224,28 +224,28 @@ _LBSNRELATIONSHIP_RELATIONSHIPTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=3357,
-  serialized_end=3540,
+  serialized_start=3763,
+  serialized_end=3946,
 )
-_sym_db.RegisterEnumDescriptor(_LBSNRELATIONSHIP_RELATIONSHIPTYPE)
+_sym_db.RegisterEnumDescriptor(_RELATIONSHIP_RELATIONSHIPTYPE)
 
 
-_LBSNORIGIN = _descriptor.Descriptor(
-  name='lbsnOrigin',
-  full_name='lbsnOrigin',
+_ORIGIN = _descriptor.Descriptor(
+  name='Origin',
+  full_name='lbsn.structure.Origin',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='origin_id', full_name='lbsnOrigin.origin_id', index=0,
+      name='origin_id', full_name='lbsn.structure.Origin.origin_id', index=0,
       number=1, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='name', full_name='lbsnOrigin.name', index=1,
+      name='name', full_name='lbsn.structure.Origin.name', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -256,7 +256,7 @@ _LBSNORIGIN = _descriptor.Descriptor(
   ],
   nested_types=[],
   enum_types=[
-    _LBSNORIGIN_ORIGINID,
+    _ORIGIN_ORIGINID,
   ],
   serialized_options=None,
   is_extendable=False,
@@ -264,27 +264,27 @@ _LBSNORIGIN = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=71,
-  serialized_end=233,
+  serialized_start=87,
+  serialized_end=256,
 )
 
 
 _COMPOSITEKEY = _descriptor.Descriptor(
   name='CompositeKey',
-  full_name='CompositeKey',
+  full_name='lbsn.structure.CompositeKey',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='origin', full_name='CompositeKey.origin', index=0,
+      name='origin', full_name='lbsn.structure.CompositeKey.origin', index=0,
       number=1, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='id', full_name='CompositeKey.id', index=1,
+      name='id', full_name='lbsn.structure.CompositeKey.id', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -302,27 +302,27 @@ _COMPOSITEKEY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=235,
-  serialized_end=290,
+  serialized_start=258,
+  serialized_end=324,
 )
 
 
 _RELATIONSHIPKEY = _descriptor.Descriptor(
   name='RelationshipKey',
-  full_name='RelationshipKey',
+  full_name='lbsn.structure.RelationshipKey',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='relation_to', full_name='RelationshipKey.relation_to', index=0,
+      name='relation_to', full_name='lbsn.structure.RelationshipKey.relation_to', index=0,
       number=1, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='relation_from', full_name='RelationshipKey.relation_from', index=1,
+      name='relation_from', full_name='lbsn.structure.RelationshipKey.relation_from', index=1,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -340,195 +340,195 @@ _RELATIONSHIPKEY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=292,
-  serialized_end=383,
+  serialized_start=326,
+  serialized_end=447,
 )
 
 
-_LBSNPOST = _descriptor.Descriptor(
-  name='lbsnPost',
-  full_name='lbsnPost',
+_POST = _descriptor.Descriptor(
+  name='Post',
+  full_name='lbsn.structure.Post',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='pkey', full_name='lbsnPost.pkey', index=0,
+      name='pkey', full_name='lbsn.structure.Post.pkey', index=0,
       number=1, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='post_latlng', full_name='lbsnPost.post_latlng', index=1,
+      name='post_latlng', full_name='lbsn.structure.Post.post_latlng', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='place_pkey', full_name='lbsnPost.place_pkey', index=2,
+      name='place_pkey', full_name='lbsn.structure.Post.place_pkey', index=2,
       number=3, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='city_pkey', full_name='lbsnPost.city_pkey', index=3,
+      name='city_pkey', full_name='lbsn.structure.Post.city_pkey', index=3,
       number=4, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='country_pkey', full_name='lbsnPost.country_pkey', index=4,
+      name='country_pkey', full_name='lbsn.structure.Post.country_pkey', index=4,
       number=5, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='user_pkey', full_name='lbsnPost.user_pkey', index=5,
+      name='user_pkey', full_name='lbsn.structure.Post.user_pkey', index=5,
       number=6, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='post_publish_date', full_name='lbsnPost.post_publish_date', index=6,
+      name='post_publish_date', full_name='lbsn.structure.Post.post_publish_date', index=6,
       number=7, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='post_body', full_name='lbsnPost.post_body', index=7,
+      name='post_body', full_name='lbsn.structure.Post.post_body', index=7,
       number=8, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='post_geoaccuracy', full_name='lbsnPost.post_geoaccuracy', index=8,
+      name='post_geoaccuracy', full_name='lbsn.structure.Post.post_geoaccuracy', index=8,
       number=9, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='user_mentions_pkey', full_name='lbsnPost.user_mentions_pkey', index=9,
+      name='user_mentions_pkey', full_name='lbsn.structure.Post.user_mentions_pkey', index=9,
       number=10, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='hashtags', full_name='lbsnPost.hashtags', index=10,
+      name='hashtags', full_name='lbsn.structure.Post.hashtags', index=10,
       number=11, type=9, cpp_type=9, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='emoji', full_name='lbsnPost.emoji', index=11,
+      name='emoji', full_name='lbsn.structure.Post.emoji', index=11,
       number=12, type=9, cpp_type=9, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='post_like_count', full_name='lbsnPost.post_like_count', index=12,
+      name='post_like_count', full_name='lbsn.structure.Post.post_like_count', index=12,
       number=13, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='post_comment_count', full_name='lbsnPost.post_comment_count', index=13,
+      name='post_comment_count', full_name='lbsn.structure.Post.post_comment_count', index=13,
       number=14, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='post_views_count', full_name='lbsnPost.post_views_count', index=14,
+      name='post_views_count', full_name='lbsn.structure.Post.post_views_count', index=14,
       number=15, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='post_title', full_name='lbsnPost.post_title', index=15,
+      name='post_title', full_name='lbsn.structure.Post.post_title', index=15,
       number=16, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='post_create_date', full_name='lbsnPost.post_create_date', index=16,
+      name='post_create_date', full_name='lbsn.structure.Post.post_create_date', index=16,
       number=17, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='post_thumbnail_url', full_name='lbsnPost.post_thumbnail_url', index=17,
+      name='post_thumbnail_url', full_name='lbsn.structure.Post.post_thumbnail_url', index=17,
       number=18, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='post_url', full_name='lbsnPost.post_url', index=18,
+      name='post_url', full_name='lbsn.structure.Post.post_url', index=18,
       number=19, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='post_type', full_name='lbsnPost.post_type', index=19,
+      name='post_type', full_name='lbsn.structure.Post.post_type', index=19,
       number=20, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='post_filter', full_name='lbsnPost.post_filter', index=20,
+      name='post_filter', full_name='lbsn.structure.Post.post_filter', index=20,
       number=21, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='post_quote_count', full_name='lbsnPost.post_quote_count', index=21,
+      name='post_quote_count', full_name='lbsn.structure.Post.post_quote_count', index=21,
       number=22, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='post_share_count', full_name='lbsnPost.post_share_count', index=22,
+      name='post_share_count', full_name='lbsn.structure.Post.post_share_count', index=22,
       number=23, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='input_source', full_name='lbsnPost.input_source', index=23,
+      name='input_source', full_name='lbsn.structure.Post.input_source', index=23,
       number=24, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='post_language', full_name='lbsnPost.post_language', index=24,
+      name='post_language', full_name='lbsn.structure.Post.post_language', index=24,
       number=25, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='post_content_license', full_name='lbsnPost.post_content_license', index=25,
+      name='post_content_license', full_name='lbsn.structure.Post.post_content_license', index=25,
       number=26, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -539,8 +539,8 @@ _LBSNPOST = _descriptor.Descriptor(
   ],
   nested_types=[],
   enum_types=[
-    _LBSNPOST_POSTGEOACCURACY,
-    _LBSNPOST_POSTTYPE,
+    _POST_POSTGEOACCURACY,
+    _POST_POSTTYPE,
   ],
   serialized_options=None,
   is_extendable=False,
@@ -548,160 +548,160 @@ _LBSNPOST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=386,
-  serialized_end=1319,
+  serialized_start=450,
+  serialized_end=1506,
 )
 
 
-_LBSNUSER = _descriptor.Descriptor(
-  name='lbsnUser',
-  full_name='lbsnUser',
+_USER = _descriptor.Descriptor(
+  name='User',
+  full_name='lbsn.structure.User',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='pkey', full_name='lbsnUser.pkey', index=0,
+      name='pkey', full_name='lbsn.structure.User.pkey', index=0,
       number=1, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='user_name', full_name='lbsnUser.user_name', index=1,
+      name='user_name', full_name='lbsn.structure.User.user_name', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='user_fullname', full_name='lbsnUser.user_fullname', index=2,
+      name='user_fullname', full_name='lbsn.structure.User.user_fullname', index=2,
       number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='follows', full_name='lbsnUser.follows', index=3,
+      name='follows', full_name='lbsn.structure.User.follows', index=3,
       number=4, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='followed', full_name='lbsnUser.followed', index=4,
+      name='followed', full_name='lbsn.structure.User.followed', index=4,
       number=5, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='group_count', full_name='lbsnUser.group_count', index=5,
+      name='group_count', full_name='lbsn.structure.User.group_count', index=5,
       number=6, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='biography', full_name='lbsnUser.biography', index=6,
+      name='biography', full_name='lbsn.structure.User.biography', index=6,
       number=7, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='post_count', full_name='lbsnUser.post_count', index=7,
+      name='post_count', full_name='lbsn.structure.User.post_count', index=7,
       number=8, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='url', full_name='lbsnUser.url', index=8,
+      name='url', full_name='lbsn.structure.User.url', index=8,
       number=9, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='is_private', full_name='lbsnUser.is_private', index=9,
+      name='is_private', full_name='lbsn.structure.User.is_private', index=9,
       number=10, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='is_available', full_name='lbsnUser.is_available', index=10,
+      name='is_available', full_name='lbsn.structure.User.is_available', index=10,
       number=11, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='user_language', full_name='lbsnUser.user_language', index=11,
+      name='user_language', full_name='lbsn.structure.User.user_language', index=11,
       number=12, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='user_location', full_name='lbsnUser.user_location', index=12,
+      name='user_location', full_name='lbsn.structure.User.user_location', index=12,
       number=13, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='user_location_geom', full_name='lbsnUser.user_location_geom', index=13,
+      name='user_location_geom', full_name='lbsn.structure.User.user_location_geom', index=13,
       number=14, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='liked_count', full_name='lbsnUser.liked_count', index=14,
+      name='liked_count', full_name='lbsn.structure.User.liked_count', index=14,
       number=15, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='active_since', full_name='lbsnUser.active_since', index=15,
+      name='active_since', full_name='lbsn.structure.User.active_since', index=15,
       number=16, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='profile_image_url', full_name='lbsnUser.profile_image_url', index=16,
+      name='profile_image_url', full_name='lbsn.structure.User.profile_image_url', index=16,
       number=17, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='user_timezone', full_name='lbsnUser.user_timezone', index=17,
+      name='user_timezone', full_name='lbsn.structure.User.user_timezone', index=17,
       number=18, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='user_utc_offset', full_name='lbsnUser.user_utc_offset', index=18,
+      name='user_utc_offset', full_name='lbsn.structure.User.user_utc_offset', index=18,
       number=19, type=17, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='user_groups_member', full_name='lbsnUser.user_groups_member', index=19,
+      name='user_groups_member', full_name='lbsn.structure.User.user_groups_member', index=19,
       number=20, type=9, cpp_type=9, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='user_groups_follows', full_name='lbsnUser.user_groups_follows', index=20,
+      name='user_groups_follows', full_name='lbsn.structure.User.user_groups_follows', index=20,
       number=21, type=9, cpp_type=9, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -719,55 +719,55 @@ _LBSNUSER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1322,
-  serialized_end=1841,
+  serialized_start=1509,
+  serialized_end=2054,
 )
 
 
-_LBSNUSERGROUP = _descriptor.Descriptor(
-  name='lbsnUserGroup',
-  full_name='lbsnUserGroup',
+_USERGROUP = _descriptor.Descriptor(
+  name='UserGroup',
+  full_name='lbsn.structure.UserGroup',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='pkey', full_name='lbsnUserGroup.pkey', index=0,
+      name='pkey', full_name='lbsn.structure.UserGroup.pkey', index=0,
       number=1, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='usergroup_name', full_name='lbsnUserGroup.usergroup_name', index=1,
+      name='usergroup_name', full_name='lbsn.structure.UserGroup.usergroup_name', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='usergroup_description', full_name='lbsnUserGroup.usergroup_description', index=2,
+      name='usergroup_description', full_name='lbsn.structure.UserGroup.usergroup_description', index=2,
       number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='member_count', full_name='lbsnUserGroup.member_count', index=3,
+      name='member_count', full_name='lbsn.structure.UserGroup.member_count', index=3,
       number=4, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='usergroup_createdate', full_name='lbsnUserGroup.usergroup_createdate', index=4,
+      name='usergroup_createdate', full_name='lbsn.structure.UserGroup.usergroup_createdate', index=4,
       number=5, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='user_owner_pkey', full_name='lbsnUserGroup.user_owner_pkey', index=5,
+      name='user_owner_pkey', full_name='lbsn.structure.UserGroup.user_owner_pkey', index=5,
       number=6, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -785,118 +785,118 @@ _LBSNUSERGROUP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1844,
-  serialized_end=2063,
+  serialized_start=2057,
+  serialized_end=2302,
 )
 
 
-_LBSNPLACE = _descriptor.Descriptor(
-  name='lbsnPlace',
-  full_name='lbsnPlace',
+_PLACE = _descriptor.Descriptor(
+  name='Place',
+  full_name='lbsn.structure.Place',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='pkey', full_name='lbsnPlace.pkey', index=0,
+      name='pkey', full_name='lbsn.structure.Place.pkey', index=0,
       number=1, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='name', full_name='lbsnPlace.name', index=1,
+      name='name', full_name='lbsn.structure.Place.name', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='name_alternatives', full_name='lbsnPlace.name_alternatives', index=2,
+      name='name_alternatives', full_name='lbsn.structure.Place.name_alternatives', index=2,
       number=3, type=9, cpp_type=9, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='post_count', full_name='lbsnPlace.post_count', index=3,
+      name='post_count', full_name='lbsn.structure.Place.post_count', index=3,
       number=4, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='url', full_name='lbsnPlace.url', index=4,
+      name='url', full_name='lbsn.structure.Place.url', index=4,
       number=5, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='geom_center', full_name='lbsnPlace.geom_center', index=5,
+      name='geom_center', full_name='lbsn.structure.Place.geom_center', index=5,
       number=6, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='geom_area', full_name='lbsnPlace.geom_area', index=6,
+      name='geom_area', full_name='lbsn.structure.Place.geom_area', index=6,
       number=7, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='city_pkey', full_name='lbsnPlace.city_pkey', index=7,
+      name='city_pkey', full_name='lbsn.structure.Place.city_pkey', index=7,
       number=8, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='place_description', full_name='lbsnPlace.place_description', index=8,
+      name='place_description', full_name='lbsn.structure.Place.place_description', index=8,
       number=9, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='place_website', full_name='lbsnPlace.place_website', index=9,
+      name='place_website', full_name='lbsn.structure.Place.place_website', index=9,
       number=10, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='place_phone', full_name='lbsnPlace.place_phone', index=10,
+      name='place_phone', full_name='lbsn.structure.Place.place_phone', index=10,
       number=11, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='address', full_name='lbsnPlace.address', index=11,
+      name='address', full_name='lbsn.structure.Place.address', index=11,
       number=12, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='zip_code', full_name='lbsnPlace.zip_code', index=12,
+      name='zip_code', full_name='lbsn.structure.Place.zip_code', index=12,
       number=13, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='checkin_count', full_name='lbsnPlace.checkin_count', index=13,
+      name='checkin_count', full_name='lbsn.structure.Place.checkin_count', index=13,
       number=14, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='like_count', full_name='lbsnPlace.like_count', index=14,
+      name='like_count', full_name='lbsn.structure.Place.like_count', index=14,
       number=15, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -914,69 +914,69 @@ _LBSNPLACE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2066,
-  serialized_end=2403,
+  serialized_start=2305,
+  serialized_end=2668,
 )
 
 
-_LBSNCITY = _descriptor.Descriptor(
-  name='lbsnCity',
-  full_name='lbsnCity',
+_CITY = _descriptor.Descriptor(
+  name='City',
+  full_name='lbsn.structure.City',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='pkey', full_name='lbsnCity.pkey', index=0,
+      name='pkey', full_name='lbsn.structure.City.pkey', index=0,
       number=1, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='name', full_name='lbsnCity.name', index=1,
+      name='name', full_name='lbsn.structure.City.name', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='name_alternatives', full_name='lbsnCity.name_alternatives', index=2,
+      name='name_alternatives', full_name='lbsn.structure.City.name_alternatives', index=2,
       number=3, type=9, cpp_type=9, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='sub_type', full_name='lbsnCity.sub_type', index=3,
+      name='sub_type', full_name='lbsn.structure.City.sub_type', index=3,
       number=4, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='url', full_name='lbsnCity.url', index=4,
+      name='url', full_name='lbsn.structure.City.url', index=4,
       number=5, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='geom_center', full_name='lbsnCity.geom_center', index=5,
+      name='geom_center', full_name='lbsn.structure.City.geom_center', index=5,
       number=6, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='geom_area', full_name='lbsnCity.geom_area', index=6,
+      name='geom_area', full_name='lbsn.structure.City.geom_area', index=6,
       number=7, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='country_pkey', full_name='lbsnCity.country_pkey', index=7,
+      name='country_pkey', full_name='lbsn.structure.City.country_pkey', index=7,
       number=8, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -994,55 +994,55 @@ _LBSNCITY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2406,
-  serialized_end=2594,
+  serialized_start=2671,
+  serialized_end=2885,
 )
 
 
-_LBSNCOUNTRY = _descriptor.Descriptor(
-  name='lbsnCountry',
-  full_name='lbsnCountry',
+_COUNTRY = _descriptor.Descriptor(
+  name='Country',
+  full_name='lbsn.structure.Country',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='pkey', full_name='lbsnCountry.pkey', index=0,
+      name='pkey', full_name='lbsn.structure.Country.pkey', index=0,
       number=1, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='name', full_name='lbsnCountry.name', index=1,
+      name='name', full_name='lbsn.structure.Country.name', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='name_alternatives', full_name='lbsnCountry.name_alternatives', index=2,
+      name='name_alternatives', full_name='lbsn.structure.Country.name_alternatives', index=2,
       number=3, type=9, cpp_type=9, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='url', full_name='lbsnCountry.url', index=3,
+      name='url', full_name='lbsn.structure.Country.url', index=3,
       number=4, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='geom_center', full_name='lbsnCountry.geom_center', index=4,
+      name='geom_center', full_name='lbsn.structure.Country.geom_center', index=4,
       number=5, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='geom_area', full_name='lbsnCountry.geom_area', index=5,
+      name='geom_area', full_name='lbsn.structure.Country.geom_area', index=5,
       number=6, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -1060,83 +1060,83 @@ _LBSNCOUNTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2597,
-  serialized_end=2733,
+  serialized_start=2888,
+  serialized_end=3035,
 )
 
 
-_LBSNPOSTREACTION = _descriptor.Descriptor(
-  name='lbsnPostReaction',
-  full_name='lbsnPostReaction',
+_POSTREACTION = _descriptor.Descriptor(
+  name='PostReaction',
+  full_name='lbsn.structure.PostReaction',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='pkey', full_name='lbsnPostReaction.pkey', index=0,
+      name='pkey', full_name='lbsn.structure.PostReaction.pkey', index=0,
       number=1, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='user_pkey', full_name='lbsnPostReaction.user_pkey', index=1,
+      name='user_pkey', full_name='lbsn.structure.PostReaction.user_pkey', index=1,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='referencedPost_pkey', full_name='lbsnPostReaction.referencedPost_pkey', index=2,
+      name='referencedPost_pkey', full_name='lbsn.structure.PostReaction.referencedPost_pkey', index=2,
       number=3, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='referencedPostreaction_pkey', full_name='lbsnPostReaction.referencedPostreaction_pkey', index=3,
+      name='referencedPostreaction_pkey', full_name='lbsn.structure.PostReaction.referencedPostreaction_pkey', index=3,
       number=4, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='reaction_latlng', full_name='lbsnPostReaction.reaction_latlng', index=4,
+      name='reaction_latlng', full_name='lbsn.structure.PostReaction.reaction_latlng', index=4,
       number=5, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='reaction_type', full_name='lbsnPostReaction.reaction_type', index=5,
+      name='reaction_type', full_name='lbsn.structure.PostReaction.reaction_type', index=5,
       number=6, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='reaction_date', full_name='lbsnPostReaction.reaction_date', index=6,
+      name='reaction_date', full_name='lbsn.structure.PostReaction.reaction_date', index=6,
       number=7, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='reaction_content', full_name='lbsnPostReaction.reaction_content', index=7,
+      name='reaction_content', full_name='lbsn.structure.PostReaction.reaction_content', index=7,
       number=8, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='reaction_like_count', full_name='lbsnPostReaction.reaction_like_count', index=8,
+      name='reaction_like_count', full_name='lbsn.structure.PostReaction.reaction_like_count', index=8,
       number=9, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='user_mentions_pkey', full_name='lbsnPostReaction.user_mentions_pkey', index=9,
+      name='user_mentions_pkey', full_name='lbsn.structure.PostReaction.user_mentions_pkey', index=9,
       number=10, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -1147,7 +1147,7 @@ _LBSNPOSTREACTION = _descriptor.Descriptor(
   ],
   nested_types=[],
   enum_types=[
-    _LBSNPOSTREACTION_REACTIONTYPE,
+    _POSTREACTION_REACTIONTYPE,
   ],
   serialized_options=None,
   is_extendable=False,
@@ -1155,27 +1155,27 @@ _LBSNPOSTREACTION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2736,
-  serialized_end=3238,
+  serialized_start=3038,
+  serialized_end=3622,
 )
 
 
-_LBSNRELATIONSHIP = _descriptor.Descriptor(
-  name='lbsnRelationship',
-  full_name='lbsnRelationship',
+_RELATIONSHIP = _descriptor.Descriptor(
+  name='Relationship',
+  full_name='lbsn.structure.Relationship',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='pkey', full_name='lbsnRelationship.pkey', index=0,
+      name='pkey', full_name='lbsn.structure.Relationship.pkey', index=0,
       number=1, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='relationship_type', full_name='lbsnRelationship.relationship_type', index=1,
+      name='relationship_type', full_name='lbsn.structure.Relationship.relationship_type', index=1,
       number=2, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -1186,7 +1186,7 @@ _LBSNRELATIONSHIP = _descriptor.Descriptor(
   ],
   nested_types=[],
   enum_types=[
-    _LBSNRELATIONSHIP_RELATIONSHIPTYPE,
+    _RELATIONSHIP_RELATIONSHIPTYPE,
   ],
   serialized_options=None,
   is_extendable=False,
@@ -1194,34 +1194,34 @@ _LBSNRELATIONSHIP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3241,
-  serialized_end=3540,
+  serialized_start=3625,
+  serialized_end=3946,
 )
 
 
 _LANGUAGE = _descriptor.Descriptor(
   name='Language',
-  full_name='Language',
+  full_name='lbsn.structure.Language',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='language_short', full_name='Language.language_short', index=0,
+      name='language_short', full_name='lbsn.structure.Language.language_short', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='name', full_name='Language.name', index=1,
+      name='name', full_name='lbsn.structure.Language.name', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='language_name_de', full_name='Language.language_name_de', index=2,
+      name='language_name_de', full_name='lbsn.structure.Language.language_name_de', index=2,
       number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -1239,145 +1239,145 @@ _LANGUAGE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3542,
-  serialized_end=3616,
+  serialized_start=3948,
+  serialized_end=4022,
 )
 
-_LBSNORIGIN.fields_by_name['origin_id'].enum_type = _LBSNORIGIN_ORIGINID
-_LBSNORIGIN_ORIGINID.containing_type = _LBSNORIGIN
-_COMPOSITEKEY.fields_by_name['origin'].message_type = _LBSNORIGIN
+_ORIGIN.fields_by_name['origin_id'].enum_type = _ORIGIN_ORIGINID
+_ORIGIN_ORIGINID.containing_type = _ORIGIN
+_COMPOSITEKEY.fields_by_name['origin'].message_type = _ORIGIN
 _RELATIONSHIPKEY.fields_by_name['relation_to'].message_type = _COMPOSITEKEY
 _RELATIONSHIPKEY.fields_by_name['relation_from'].message_type = _COMPOSITEKEY
-_LBSNPOST.fields_by_name['pkey'].message_type = _COMPOSITEKEY
-_LBSNPOST.fields_by_name['place_pkey'].message_type = _COMPOSITEKEY
-_LBSNPOST.fields_by_name['city_pkey'].message_type = _COMPOSITEKEY
-_LBSNPOST.fields_by_name['country_pkey'].message_type = _COMPOSITEKEY
-_LBSNPOST.fields_by_name['user_pkey'].message_type = _COMPOSITEKEY
-_LBSNPOST.fields_by_name['post_publish_date'].message_type = google_dot_protobuf_dot_timestamp__pb2._TIMESTAMP
-_LBSNPOST.fields_by_name['post_geoaccuracy'].enum_type = _LBSNPOST_POSTGEOACCURACY
-_LBSNPOST.fields_by_name['user_mentions_pkey'].message_type = _COMPOSITEKEY
-_LBSNPOST.fields_by_name['post_create_date'].message_type = google_dot_protobuf_dot_timestamp__pb2._TIMESTAMP
-_LBSNPOST.fields_by_name['post_type'].enum_type = _LBSNPOST_POSTTYPE
-_LBSNPOST.fields_by_name['post_language'].message_type = _LANGUAGE
-_LBSNPOST_POSTGEOACCURACY.containing_type = _LBSNPOST
-_LBSNPOST_POSTTYPE.containing_type = _LBSNPOST
-_LBSNUSER.fields_by_name['pkey'].message_type = _COMPOSITEKEY
-_LBSNUSER.fields_by_name['user_language'].message_type = _LANGUAGE
-_LBSNUSER.fields_by_name['active_since'].message_type = google_dot_protobuf_dot_timestamp__pb2._TIMESTAMP
-_LBSNUSERGROUP.fields_by_name['pkey'].message_type = _COMPOSITEKEY
-_LBSNUSERGROUP.fields_by_name['usergroup_createdate'].message_type = google_dot_protobuf_dot_timestamp__pb2._TIMESTAMP
-_LBSNUSERGROUP.fields_by_name['user_owner_pkey'].message_type = _COMPOSITEKEY
-_LBSNPLACE.fields_by_name['pkey'].message_type = _COMPOSITEKEY
-_LBSNPLACE.fields_by_name['city_pkey'].message_type = _COMPOSITEKEY
-_LBSNCITY.fields_by_name['pkey'].message_type = _COMPOSITEKEY
-_LBSNCITY.fields_by_name['country_pkey'].message_type = _COMPOSITEKEY
-_LBSNCOUNTRY.fields_by_name['pkey'].message_type = _COMPOSITEKEY
-_LBSNPOSTREACTION.fields_by_name['pkey'].message_type = _COMPOSITEKEY
-_LBSNPOSTREACTION.fields_by_name['user_pkey'].message_type = _COMPOSITEKEY
-_LBSNPOSTREACTION.fields_by_name['referencedPost_pkey'].message_type = _COMPOSITEKEY
-_LBSNPOSTREACTION.fields_by_name['referencedPostreaction_pkey'].message_type = _COMPOSITEKEY
-_LBSNPOSTREACTION.fields_by_name['reaction_type'].enum_type = _LBSNPOSTREACTION_REACTIONTYPE
-_LBSNPOSTREACTION.fields_by_name['reaction_date'].message_type = google_dot_protobuf_dot_timestamp__pb2._TIMESTAMP
-_LBSNPOSTREACTION.fields_by_name['user_mentions_pkey'].message_type = _COMPOSITEKEY
-_LBSNPOSTREACTION_REACTIONTYPE.containing_type = _LBSNPOSTREACTION
-_LBSNRELATIONSHIP.fields_by_name['pkey'].message_type = _RELATIONSHIPKEY
-_LBSNRELATIONSHIP.fields_by_name['relationship_type'].enum_type = _LBSNRELATIONSHIP_RELATIONSHIPTYPE
-_LBSNRELATIONSHIP_RELATIONSHIPTYPE.containing_type = _LBSNRELATIONSHIP
-DESCRIPTOR.message_types_by_name['lbsnOrigin'] = _LBSNORIGIN
+_POST.fields_by_name['pkey'].message_type = _COMPOSITEKEY
+_POST.fields_by_name['place_pkey'].message_type = _COMPOSITEKEY
+_POST.fields_by_name['city_pkey'].message_type = _COMPOSITEKEY
+_POST.fields_by_name['country_pkey'].message_type = _COMPOSITEKEY
+_POST.fields_by_name['user_pkey'].message_type = _COMPOSITEKEY
+_POST.fields_by_name['post_publish_date'].message_type = google_dot_protobuf_dot_timestamp__pb2._TIMESTAMP
+_POST.fields_by_name['post_geoaccuracy'].enum_type = _POST_POSTGEOACCURACY
+_POST.fields_by_name['user_mentions_pkey'].message_type = _COMPOSITEKEY
+_POST.fields_by_name['post_create_date'].message_type = google_dot_protobuf_dot_timestamp__pb2._TIMESTAMP
+_POST.fields_by_name['post_type'].enum_type = _POST_POSTTYPE
+_POST.fields_by_name['post_language'].message_type = _LANGUAGE
+_POST_POSTGEOACCURACY.containing_type = _POST
+_POST_POSTTYPE.containing_type = _POST
+_USER.fields_by_name['pkey'].message_type = _COMPOSITEKEY
+_USER.fields_by_name['user_language'].message_type = _LANGUAGE
+_USER.fields_by_name['active_since'].message_type = google_dot_protobuf_dot_timestamp__pb2._TIMESTAMP
+_USERGROUP.fields_by_name['pkey'].message_type = _COMPOSITEKEY
+_USERGROUP.fields_by_name['usergroup_createdate'].message_type = google_dot_protobuf_dot_timestamp__pb2._TIMESTAMP
+_USERGROUP.fields_by_name['user_owner_pkey'].message_type = _COMPOSITEKEY
+_PLACE.fields_by_name['pkey'].message_type = _COMPOSITEKEY
+_PLACE.fields_by_name['city_pkey'].message_type = _COMPOSITEKEY
+_CITY.fields_by_name['pkey'].message_type = _COMPOSITEKEY
+_CITY.fields_by_name['country_pkey'].message_type = _COMPOSITEKEY
+_COUNTRY.fields_by_name['pkey'].message_type = _COMPOSITEKEY
+_POSTREACTION.fields_by_name['pkey'].message_type = _COMPOSITEKEY
+_POSTREACTION.fields_by_name['user_pkey'].message_type = _COMPOSITEKEY
+_POSTREACTION.fields_by_name['referencedPost_pkey'].message_type = _COMPOSITEKEY
+_POSTREACTION.fields_by_name['referencedPostreaction_pkey'].message_type = _COMPOSITEKEY
+_POSTREACTION.fields_by_name['reaction_type'].enum_type = _POSTREACTION_REACTIONTYPE
+_POSTREACTION.fields_by_name['reaction_date'].message_type = google_dot_protobuf_dot_timestamp__pb2._TIMESTAMP
+_POSTREACTION.fields_by_name['user_mentions_pkey'].message_type = _COMPOSITEKEY
+_POSTREACTION_REACTIONTYPE.containing_type = _POSTREACTION
+_RELATIONSHIP.fields_by_name['pkey'].message_type = _RELATIONSHIPKEY
+_RELATIONSHIP.fields_by_name['relationship_type'].enum_type = _RELATIONSHIP_RELATIONSHIPTYPE
+_RELATIONSHIP_RELATIONSHIPTYPE.containing_type = _RELATIONSHIP
+DESCRIPTOR.message_types_by_name['Origin'] = _ORIGIN
 DESCRIPTOR.message_types_by_name['CompositeKey'] = _COMPOSITEKEY
 DESCRIPTOR.message_types_by_name['RelationshipKey'] = _RELATIONSHIPKEY
-DESCRIPTOR.message_types_by_name['lbsnPost'] = _LBSNPOST
-DESCRIPTOR.message_types_by_name['lbsnUser'] = _LBSNUSER
-DESCRIPTOR.message_types_by_name['lbsnUserGroup'] = _LBSNUSERGROUP
-DESCRIPTOR.message_types_by_name['lbsnPlace'] = _LBSNPLACE
-DESCRIPTOR.message_types_by_name['lbsnCity'] = _LBSNCITY
-DESCRIPTOR.message_types_by_name['lbsnCountry'] = _LBSNCOUNTRY
-DESCRIPTOR.message_types_by_name['lbsnPostReaction'] = _LBSNPOSTREACTION
-DESCRIPTOR.message_types_by_name['lbsnRelationship'] = _LBSNRELATIONSHIP
+DESCRIPTOR.message_types_by_name['Post'] = _POST
+DESCRIPTOR.message_types_by_name['User'] = _USER
+DESCRIPTOR.message_types_by_name['UserGroup'] = _USERGROUP
+DESCRIPTOR.message_types_by_name['Place'] = _PLACE
+DESCRIPTOR.message_types_by_name['City'] = _CITY
+DESCRIPTOR.message_types_by_name['Country'] = _COUNTRY
+DESCRIPTOR.message_types_by_name['PostReaction'] = _POSTREACTION
+DESCRIPTOR.message_types_by_name['Relationship'] = _RELATIONSHIP
 DESCRIPTOR.message_types_by_name['Language'] = _LANGUAGE
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
-lbsnOrigin = _reflection.GeneratedProtocolMessageType('lbsnOrigin', (_message.Message,), {
-  'DESCRIPTOR' : _LBSNORIGIN,
+Origin = _reflection.GeneratedProtocolMessageType('Origin', (_message.Message,), {
+  'DESCRIPTOR' : _ORIGIN,
   '__module__' : 'lbsnstructure.lbsnstructure_pb2'
-  # @@protoc_insertion_point(class_scope:lbsnOrigin)
+  # @@protoc_insertion_point(class_scope:lbsn.structure.Origin)
   })
-_sym_db.RegisterMessage(lbsnOrigin)
+_sym_db.RegisterMessage(Origin)
 
 CompositeKey = _reflection.GeneratedProtocolMessageType('CompositeKey', (_message.Message,), {
   'DESCRIPTOR' : _COMPOSITEKEY,
   '__module__' : 'lbsnstructure.lbsnstructure_pb2'
-  # @@protoc_insertion_point(class_scope:CompositeKey)
+  # @@protoc_insertion_point(class_scope:lbsn.structure.CompositeKey)
   })
 _sym_db.RegisterMessage(CompositeKey)
 
 RelationshipKey = _reflection.GeneratedProtocolMessageType('RelationshipKey', (_message.Message,), {
   'DESCRIPTOR' : _RELATIONSHIPKEY,
   '__module__' : 'lbsnstructure.lbsnstructure_pb2'
-  # @@protoc_insertion_point(class_scope:RelationshipKey)
+  # @@protoc_insertion_point(class_scope:lbsn.structure.RelationshipKey)
   })
 _sym_db.RegisterMessage(RelationshipKey)
 
-lbsnPost = _reflection.GeneratedProtocolMessageType('lbsnPost', (_message.Message,), {
-  'DESCRIPTOR' : _LBSNPOST,
+Post = _reflection.GeneratedProtocolMessageType('Post', (_message.Message,), {
+  'DESCRIPTOR' : _POST,
   '__module__' : 'lbsnstructure.lbsnstructure_pb2'
-  # @@protoc_insertion_point(class_scope:lbsnPost)
+  # @@protoc_insertion_point(class_scope:lbsn.structure.Post)
   })
-_sym_db.RegisterMessage(lbsnPost)
+_sym_db.RegisterMessage(Post)
 
-lbsnUser = _reflection.GeneratedProtocolMessageType('lbsnUser', (_message.Message,), {
-  'DESCRIPTOR' : _LBSNUSER,
+User = _reflection.GeneratedProtocolMessageType('User', (_message.Message,), {
+  'DESCRIPTOR' : _USER,
   '__module__' : 'lbsnstructure.lbsnstructure_pb2'
-  # @@protoc_insertion_point(class_scope:lbsnUser)
+  # @@protoc_insertion_point(class_scope:lbsn.structure.User)
   })
-_sym_db.RegisterMessage(lbsnUser)
+_sym_db.RegisterMessage(User)
 
-lbsnUserGroup = _reflection.GeneratedProtocolMessageType('lbsnUserGroup', (_message.Message,), {
-  'DESCRIPTOR' : _LBSNUSERGROUP,
+UserGroup = _reflection.GeneratedProtocolMessageType('UserGroup', (_message.Message,), {
+  'DESCRIPTOR' : _USERGROUP,
   '__module__' : 'lbsnstructure.lbsnstructure_pb2'
-  # @@protoc_insertion_point(class_scope:lbsnUserGroup)
+  # @@protoc_insertion_point(class_scope:lbsn.structure.UserGroup)
   })
-_sym_db.RegisterMessage(lbsnUserGroup)
+_sym_db.RegisterMessage(UserGroup)
 
-lbsnPlace = _reflection.GeneratedProtocolMessageType('lbsnPlace', (_message.Message,), {
-  'DESCRIPTOR' : _LBSNPLACE,
+Place = _reflection.GeneratedProtocolMessageType('Place', (_message.Message,), {
+  'DESCRIPTOR' : _PLACE,
   '__module__' : 'lbsnstructure.lbsnstructure_pb2'
-  # @@protoc_insertion_point(class_scope:lbsnPlace)
+  # @@protoc_insertion_point(class_scope:lbsn.structure.Place)
   })
-_sym_db.RegisterMessage(lbsnPlace)
+_sym_db.RegisterMessage(Place)
 
-lbsnCity = _reflection.GeneratedProtocolMessageType('lbsnCity', (_message.Message,), {
-  'DESCRIPTOR' : _LBSNCITY,
+City = _reflection.GeneratedProtocolMessageType('City', (_message.Message,), {
+  'DESCRIPTOR' : _CITY,
   '__module__' : 'lbsnstructure.lbsnstructure_pb2'
-  # @@protoc_insertion_point(class_scope:lbsnCity)
+  # @@protoc_insertion_point(class_scope:lbsn.structure.City)
   })
-_sym_db.RegisterMessage(lbsnCity)
+_sym_db.RegisterMessage(City)
 
-lbsnCountry = _reflection.GeneratedProtocolMessageType('lbsnCountry', (_message.Message,), {
-  'DESCRIPTOR' : _LBSNCOUNTRY,
+Country = _reflection.GeneratedProtocolMessageType('Country', (_message.Message,), {
+  'DESCRIPTOR' : _COUNTRY,
   '__module__' : 'lbsnstructure.lbsnstructure_pb2'
-  # @@protoc_insertion_point(class_scope:lbsnCountry)
+  # @@protoc_insertion_point(class_scope:lbsn.structure.Country)
   })
-_sym_db.RegisterMessage(lbsnCountry)
+_sym_db.RegisterMessage(Country)
 
-lbsnPostReaction = _reflection.GeneratedProtocolMessageType('lbsnPostReaction', (_message.Message,), {
-  'DESCRIPTOR' : _LBSNPOSTREACTION,
+PostReaction = _reflection.GeneratedProtocolMessageType('PostReaction', (_message.Message,), {
+  'DESCRIPTOR' : _POSTREACTION,
   '__module__' : 'lbsnstructure.lbsnstructure_pb2'
-  # @@protoc_insertion_point(class_scope:lbsnPostReaction)
+  # @@protoc_insertion_point(class_scope:lbsn.structure.PostReaction)
   })
-_sym_db.RegisterMessage(lbsnPostReaction)
+_sym_db.RegisterMessage(PostReaction)
 
-lbsnRelationship = _reflection.GeneratedProtocolMessageType('lbsnRelationship', (_message.Message,), {
-  'DESCRIPTOR' : _LBSNRELATIONSHIP,
+Relationship = _reflection.GeneratedProtocolMessageType('Relationship', (_message.Message,), {
+  'DESCRIPTOR' : _RELATIONSHIP,
   '__module__' : 'lbsnstructure.lbsnstructure_pb2'
-  # @@protoc_insertion_point(class_scope:lbsnRelationship)
+  # @@protoc_insertion_point(class_scope:lbsn.structure.Relationship)
   })
-_sym_db.RegisterMessage(lbsnRelationship)
+_sym_db.RegisterMessage(Relationship)
 
 Language = _reflection.GeneratedProtocolMessageType('Language', (_message.Message,), {
   'DESCRIPTOR' : _LANGUAGE,
   '__module__' : 'lbsnstructure.lbsnstructure_pb2'
-  # @@protoc_insertion_point(class_scope:Language)
+  # @@protoc_insertion_point(class_scope:lbsn.structure.Language)
   })
 _sym_db.RegisterMessage(Language)
 
