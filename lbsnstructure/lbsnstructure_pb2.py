@@ -14,6 +14,7 @@ _sym_db = _symbol_database.Default()
 
 
 from google.protobuf import timestamp_pb2 as google_dot_protobuf_dot_timestamp__pb2
+from google.protobuf import duration_pb2 as google_dot_protobuf_dot_duration__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
@@ -21,9 +22,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='lbsn.structure',
   syntax='proto3',
   serialized_options=None,
-  serialized_pb=_b('\n!lbsnstructure/lbsnstructure.proto\x12\x0elbsn.structure\x1a\x1fgoogle/protobuf/timestamp.proto\"\xa9\x01\n\x06Origin\x12\x32\n\torigin_id\x18\x01 \x01(\x0e\x32\x1f.lbsn.structure.Origin.OriginID\x12\x0c\n\x04name\x18\x02 \x01(\t\"]\n\x08OriginID\x12\x0b\n\x07UNKNOWN\x10\x00\x12\r\n\tINSTAGRAM\x10\x01\x12\n\n\x06\x46LICKR\x10\x02\x12\x0b\n\x07TWITTER\x10\x03\x12\x0c\n\x08\x46\x41\x43\x45\x42OOK\x10\x04\x12\x0e\n\nFOURSQUARE\x10\x05\"B\n\x0c\x43ompositeKey\x12&\n\x06origin\x18\x01 \x01(\x0b\x32\x16.lbsn.structure.Origin\x12\n\n\x02id\x18\x02 \x01(\t\"y\n\x0fRelationshipKey\x12\x31\n\x0brelation_to\x18\x01 \x01(\x0b\x32\x1c.lbsn.structure.CompositeKey\x12\x33\n\rrelation_from\x18\x02 \x01(\x0b\x32\x1c.lbsn.structure.CompositeKey\"\xa0\x08\n\x04Post\x12*\n\x04pkey\x18\x01 \x01(\x0b\x32\x1c.lbsn.structure.CompositeKey\x12\x13\n\x0bpost_latlng\x18\x02 \x01(\t\x12\x30\n\nplace_pkey\x18\x03 \x01(\x0b\x32\x1c.lbsn.structure.CompositeKey\x12/\n\tcity_pkey\x18\x04 \x01(\x0b\x32\x1c.lbsn.structure.CompositeKey\x12\x32\n\x0c\x63ountry_pkey\x18\x05 \x01(\x0b\x32\x1c.lbsn.structure.CompositeKey\x12/\n\tuser_pkey\x18\x06 \x01(\x0b\x32\x1c.lbsn.structure.CompositeKey\x12\x35\n\x11post_publish_date\x18\x07 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x11\n\tpost_body\x18\x08 \x01(\t\x12>\n\x10post_geoaccuracy\x18\t \x01(\x0e\x32$.lbsn.structure.Post.PostGeoaccuracy\x12\x38\n\x12user_mentions_pkey\x18\n \x03(\x0b\x32\x1c.lbsn.structure.CompositeKey\x12\x10\n\x08hashtags\x18\x0b \x03(\t\x12\r\n\x05\x65moji\x18\x0c \x03(\t\x12\x17\n\x0fpost_like_count\x18\r \x01(\x03\x12\x1a\n\x12post_comment_count\x18\x0e \x01(\x03\x12\x18\n\x10post_views_count\x18\x0f \x01(\x03\x12\x12\n\npost_title\x18\x10 \x01(\t\x12\x34\n\x10post_create_date\x18\x11 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x1a\n\x12post_thumbnail_url\x18\x12 \x01(\t\x12\x10\n\x08post_url\x18\x13 \x01(\t\x12\x30\n\tpost_type\x18\x14 \x01(\x0e\x32\x1d.lbsn.structure.Post.PostType\x12\x13\n\x0bpost_filter\x18\x15 \x01(\t\x12\x18\n\x10post_quote_count\x18\x16 \x01(\x03\x12\x18\n\x10post_share_count\x18\x17 \x01(\x03\x12\x14\n\x0cinput_source\x18\x18 \x01(\t\x12/\n\rpost_language\x18\x19 \x01(\x0b\x32\x18.lbsn.structure.Language\x12\x1c\n\x14post_content_license\x18\x1a \x01(\x05\"L\n\x0fPostGeoaccuracy\x12\x0b\n\x07UNKNOWN\x10\x00\x12\n\n\x06LATLNG\x10\x01\x12\t\n\x05PLACE\x10\x02\x12\x08\n\x04\x43ITY\x10\x03\x12\x0b\n\x07\x43OUNTRY\x10\x04\"5\n\x08PostType\x12\x08\n\x04TEXT\x10\x00\x12\t\n\x05IMAGE\x10\x01\x12\t\n\x05VIDEO\x10\x02\x12\t\n\x05OTHER\x10\x03\"\xa1\x04\n\x04User\x12*\n\x04pkey\x18\x01 \x01(\x0b\x32\x1c.lbsn.structure.CompositeKey\x12\x11\n\tuser_name\x18\x02 \x01(\t\x12\x15\n\ruser_fullname\x18\x03 \x01(\t\x12\x0f\n\x07\x66ollows\x18\x04 \x01(\x03\x12\x10\n\x08\x66ollowed\x18\x05 \x01(\x03\x12\x13\n\x0bgroup_count\x18\x06 \x01(\x03\x12\x11\n\tbiography\x18\x07 \x01(\t\x12\x12\n\npost_count\x18\x08 \x01(\x03\x12\x0b\n\x03url\x18\t \x01(\t\x12\x12\n\nis_private\x18\n \x01(\x08\x12\x14\n\x0cis_available\x18\x0b \x01(\x08\x12/\n\ruser_language\x18\x0c \x01(\x0b\x32\x18.lbsn.structure.Language\x12\x15\n\ruser_location\x18\r \x01(\t\x12\x1a\n\x12user_location_geom\x18\x0e \x01(\t\x12\x13\n\x0bliked_count\x18\x0f \x01(\x03\x12\x30\n\x0c\x61\x63tive_since\x18\x10 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x19\n\x11profile_image_url\x18\x11 \x01(\t\x12\x15\n\ruser_timezone\x18\x12 \x01(\t\x12\x17\n\x0fuser_utc_offset\x18\x13 \x01(\x11\x12\x1a\n\x12user_groups_member\x18\x14 \x03(\t\x12\x1b\n\x13user_groups_follows\x18\x15 \x03(\t\"\xf5\x01\n\tUserGroup\x12*\n\x04pkey\x18\x01 \x01(\x0b\x32\x1c.lbsn.structure.CompositeKey\x12\x16\n\x0eusergroup_name\x18\x02 \x01(\t\x12\x1d\n\x15usergroup_description\x18\x03 \x01(\t\x12\x14\n\x0cmember_count\x18\x04 \x01(\x03\x12\x38\n\x14usergroup_createdate\x18\x05 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x35\n\x0fuser_owner_pkey\x18\x06 \x01(\x0b\x32\x1c.lbsn.structure.CompositeKey\"\xeb\x02\n\x05Place\x12*\n\x04pkey\x18\x01 \x01(\x0b\x32\x1c.lbsn.structure.CompositeKey\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x19\n\x11name_alternatives\x18\x03 \x03(\t\x12\x12\n\npost_count\x18\x04 \x01(\x03\x12\x0b\n\x03url\x18\x05 \x01(\t\x12\x13\n\x0bgeom_center\x18\x06 \x01(\t\x12\x11\n\tgeom_area\x18\x07 \x01(\t\x12/\n\tcity_pkey\x18\x08 \x01(\x0b\x32\x1c.lbsn.structure.CompositeKey\x12\x19\n\x11place_description\x18\t \x01(\t\x12\x15\n\rplace_website\x18\n \x01(\t\x12\x13\n\x0bplace_phone\x18\x0b \x01(\t\x12\x0f\n\x07\x61\x64\x64ress\x18\x0c \x01(\t\x12\x10\n\x08zip_code\x18\r \x01(\t\x12\x15\n\rcheckin_count\x18\x0e \x01(\x03\x12\x12\n\nlike_count\x18\x0f \x01(\x03\"\xd6\x01\n\x04\x43ity\x12*\n\x04pkey\x18\x01 \x01(\x0b\x32\x1c.lbsn.structure.CompositeKey\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x19\n\x11name_alternatives\x18\x03 \x03(\t\x12\x10\n\x08sub_type\x18\x04 \x01(\t\x12\x0b\n\x03url\x18\x05 \x01(\t\x12\x13\n\x0bgeom_center\x18\x06 \x01(\t\x12\x11\n\tgeom_area\x18\x07 \x01(\t\x12\x32\n\x0c\x63ountry_pkey\x18\x08 \x01(\x0b\x32\x1c.lbsn.structure.CompositeKey\"\x93\x01\n\x07\x43ountry\x12*\n\x04pkey\x18\x01 \x01(\x0b\x32\x1c.lbsn.structure.CompositeKey\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x19\n\x11name_alternatives\x18\x03 \x03(\t\x12\x0b\n\x03url\x18\x04 \x01(\t\x12\x13\n\x0bgeom_center\x18\x05 \x01(\t\x12\x11\n\tgeom_area\x18\x06 \x01(\t\"\xc8\x04\n\x0cPostReaction\x12*\n\x04pkey\x18\x01 \x01(\x0b\x32\x1c.lbsn.structure.CompositeKey\x12/\n\tuser_pkey\x18\x02 \x01(\x0b\x32\x1c.lbsn.structure.CompositeKey\x12\x39\n\x13referencedPost_pkey\x18\x03 \x01(\x0b\x32\x1c.lbsn.structure.CompositeKey\x12\x41\n\x1breferencedPostreaction_pkey\x18\x04 \x01(\x0b\x32\x1c.lbsn.structure.CompositeKey\x12\x17\n\x0freaction_latlng\x18\x05 \x01(\t\x12@\n\rreaction_type\x18\x06 \x01(\x0e\x32).lbsn.structure.PostReaction.ReactionType\x12\x31\n\rreaction_date\x18\x07 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x18\n\x10reaction_content\x18\x08 \x01(\t\x12\x1b\n\x13reaction_like_count\x18\t \x01(\x03\x12\x38\n\x12user_mentions_pkey\x18\n \x03(\x0b\x32\x1c.lbsn.structure.CompositeKey\"^\n\x0cReactionType\x12\x0b\n\x07UNKNOWN\x10\x00\x12\t\n\x05SHARE\x10\x01\x12\x0b\n\x07\x43OMMENT\x10\x02\x12\t\n\x05QUOTE\x10\x03\x12\x08\n\x04LIKE\x10\x04\x12\t\n\x05\x45MOJI\x10\x05\x12\t\n\x05OTHER\x10\x06\"\xc1\x02\n\x0cRelationship\x12-\n\x04pkey\x18\x01 \x01(\x0b\x32\x1f.lbsn.structure.RelationshipKey\x12H\n\x11relationship_type\x18\x02 \x01(\x0e\x32-.lbsn.structure.Relationship.RelationshipType\"\xb7\x01\n\x10RelationshipType\x12\x0b\n\x07UNKNOWN\x10\x00\x12\x0c\n\x08isFRIEND\x10\x01\x12\x0f\n\x0bisCONNECTED\x10\x02\x12\x0b\n\x07isEQUAL\x10\x03\x12\x0b\n\x07inGROUP\x10\x04\x12\x10\n\x0c\x66ollowsGROUP\x10\x05\x12\x0f\n\x0binCOMMUNITY\x10\x06\x12\x11\n\rMENTIONS_USER\x10\x07\x12\x0e\n\nhasHASHTAG\x10\x08\x12\x0c\n\x08hasEMOJI\x10\t\x12\t\n\x05OTHER\x10\n\"J\n\x08Language\x12\x16\n\x0elanguage_short\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x18\n\x10language_name_de\x18\x03 \x01(\tb\x06proto3')
+  serialized_pb=_b('\n!lbsnstructure/lbsnstructure.proto\x12\x0elbsn.structure\x1a\x1fgoogle/protobuf/timestamp.proto\x1a\x1egoogle/protobuf/duration.proto\"\xa9\x01\n\x06Origin\x12\x32\n\torigin_id\x18\x01 \x01(\x0e\x32\x1f.lbsn.structure.Origin.OriginID\x12\x0c\n\x04name\x18\x02 \x01(\t\"]\n\x08OriginID\x12\x0b\n\x07UNKNOWN\x10\x00\x12\r\n\tINSTAGRAM\x10\x01\x12\n\n\x06\x46LICKR\x10\x02\x12\x0b\n\x07TWITTER\x10\x03\x12\x0c\n\x08\x46\x41\x43\x45\x42OOK\x10\x04\x12\x0e\n\nFOURSQUARE\x10\x05\"B\n\x0c\x43ompositeKey\x12&\n\x06origin\x18\x01 \x01(\x0b\x32\x16.lbsn.structure.Origin\x12\n\n\x02id\x18\x02 \x01(\t\"y\n\x0fRelationshipKey\x12\x31\n\x0brelation_to\x18\x01 \x01(\x0b\x32\x1c.lbsn.structure.CompositeKey\x12\x33\n\rrelation_from\x18\x02 \x01(\x0b\x32\x1c.lbsn.structure.CompositeKey\"\xa0\x08\n\x04Post\x12*\n\x04pkey\x18\x01 \x01(\x0b\x32\x1c.lbsn.structure.CompositeKey\x12\x13\n\x0bpost_latlng\x18\x02 \x01(\t\x12\x30\n\nplace_pkey\x18\x03 \x01(\x0b\x32\x1c.lbsn.structure.CompositeKey\x12/\n\tcity_pkey\x18\x04 \x01(\x0b\x32\x1c.lbsn.structure.CompositeKey\x12\x32\n\x0c\x63ountry_pkey\x18\x05 \x01(\x0b\x32\x1c.lbsn.structure.CompositeKey\x12/\n\tuser_pkey\x18\x06 \x01(\x0b\x32\x1c.lbsn.structure.CompositeKey\x12\x35\n\x11post_publish_date\x18\x07 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x11\n\tpost_body\x18\x08 \x01(\t\x12>\n\x10post_geoaccuracy\x18\t \x01(\x0e\x32$.lbsn.structure.Post.PostGeoaccuracy\x12\x38\n\x12user_mentions_pkey\x18\n \x03(\x0b\x32\x1c.lbsn.structure.CompositeKey\x12\x10\n\x08hashtags\x18\x0b \x03(\t\x12\r\n\x05\x65moji\x18\x0c \x03(\t\x12\x17\n\x0fpost_like_count\x18\r \x01(\x03\x12\x1a\n\x12post_comment_count\x18\x0e \x01(\x03\x12\x18\n\x10post_views_count\x18\x0f \x01(\x03\x12\x12\n\npost_title\x18\x10 \x01(\t\x12\x34\n\x10post_create_date\x18\x11 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x1a\n\x12post_thumbnail_url\x18\x12 \x01(\t\x12\x10\n\x08post_url\x18\x13 \x01(\t\x12\x30\n\tpost_type\x18\x14 \x01(\x0e\x32\x1d.lbsn.structure.Post.PostType\x12\x13\n\x0bpost_filter\x18\x15 \x01(\t\x12\x18\n\x10post_quote_count\x18\x16 \x01(\x03\x12\x18\n\x10post_share_count\x18\x17 \x01(\x03\x12\x14\n\x0cinput_source\x18\x18 \x01(\t\x12/\n\rpost_language\x18\x19 \x01(\x0b\x32\x18.lbsn.structure.Language\x12\x1c\n\x14post_content_license\x18\x1a \x01(\x05\"L\n\x0fPostGeoaccuracy\x12\x0b\n\x07UNKNOWN\x10\x00\x12\n\n\x06LATLNG\x10\x01\x12\t\n\x05PLACE\x10\x02\x12\x08\n\x04\x43ITY\x10\x03\x12\x0b\n\x07\x43OUNTRY\x10\x04\"5\n\x08PostType\x12\x08\n\x04TEXT\x10\x00\x12\t\n\x05IMAGE\x10\x01\x12\t\n\x05VIDEO\x10\x02\x12\t\n\x05OTHER\x10\x03\"\xa1\x04\n\x04User\x12*\n\x04pkey\x18\x01 \x01(\x0b\x32\x1c.lbsn.structure.CompositeKey\x12\x11\n\tuser_name\x18\x02 \x01(\t\x12\x15\n\ruser_fullname\x18\x03 \x01(\t\x12\x0f\n\x07\x66ollows\x18\x04 \x01(\x03\x12\x10\n\x08\x66ollowed\x18\x05 \x01(\x03\x12\x13\n\x0bgroup_count\x18\x06 \x01(\x03\x12\x11\n\tbiography\x18\x07 \x01(\t\x12\x12\n\npost_count\x18\x08 \x01(\x03\x12\x0b\n\x03url\x18\t \x01(\t\x12\x12\n\nis_private\x18\n \x01(\x08\x12\x14\n\x0cis_available\x18\x0b \x01(\x08\x12/\n\ruser_language\x18\x0c \x01(\x0b\x32\x18.lbsn.structure.Language\x12\x15\n\ruser_location\x18\r \x01(\t\x12\x1a\n\x12user_location_geom\x18\x0e \x01(\t\x12\x13\n\x0bliked_count\x18\x0f \x01(\x03\x12\x30\n\x0c\x61\x63tive_since\x18\x10 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x19\n\x11profile_image_url\x18\x11 \x01(\t\x12\x15\n\ruser_timezone\x18\x12 \x01(\t\x12\x17\n\x0fuser_utc_offset\x18\x13 \x01(\x11\x12\x1a\n\x12user_groups_member\x18\x14 \x03(\t\x12\x1b\n\x13user_groups_follows\x18\x15 \x03(\t\"\xf5\x01\n\tUserGroup\x12*\n\x04pkey\x18\x01 \x01(\x0b\x32\x1c.lbsn.structure.CompositeKey\x12\x16\n\x0eusergroup_name\x18\x02 \x01(\t\x12\x1d\n\x15usergroup_description\x18\x03 \x01(\t\x12\x14\n\x0cmember_count\x18\x04 \x01(\x03\x12\x38\n\x14usergroup_createdate\x18\x05 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x35\n\x0fuser_owner_pkey\x18\x06 \x01(\x0b\x32\x1c.lbsn.structure.CompositeKey\"\x82\x03\n\x05Place\x12*\n\x04pkey\x18\x01 \x01(\x0b\x32\x1c.lbsn.structure.CompositeKey\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x19\n\x11name_alternatives\x18\x03 \x03(\t\x12\x12\n\npost_count\x18\x04 \x01(\x03\x12\x0b\n\x03url\x18\x05 \x01(\t\x12\x13\n\x0bgeom_center\x18\x06 \x01(\t\x12\x11\n\tgeom_area\x18\x07 \x01(\t\x12/\n\tcity_pkey\x18\x08 \x01(\x0b\x32\x1c.lbsn.structure.CompositeKey\x12\x19\n\x11place_description\x18\t \x01(\t\x12\x15\n\rplace_website\x18\n \x01(\t\x12\x13\n\x0bplace_phone\x18\x0b \x01(\t\x12\x0f\n\x07\x61\x64\x64ress\x18\x0c \x01(\t\x12\x10\n\x08zip_code\x18\r \x01(\t\x12\x15\n\rcheckin_count\x18\x0e \x01(\x03\x12\x12\n\nlike_count\x18\x0f \x01(\x03\x12\x15\n\rparent_places\x18\x10 \x03(\t\"\xd6\x01\n\x04\x43ity\x12*\n\x04pkey\x18\x01 \x01(\x0b\x32\x1c.lbsn.structure.CompositeKey\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x19\n\x11name_alternatives\x18\x03 \x03(\t\x12\x10\n\x08sub_type\x18\x04 \x01(\t\x12\x0b\n\x03url\x18\x05 \x01(\t\x12\x13\n\x0bgeom_center\x18\x06 \x01(\t\x12\x11\n\tgeom_area\x18\x07 \x01(\t\x12\x32\n\x0c\x63ountry_pkey\x18\x08 \x01(\x0b\x32\x1c.lbsn.structure.CompositeKey\"\x93\x01\n\x07\x43ountry\x12*\n\x04pkey\x18\x01 \x01(\x0b\x32\x1c.lbsn.structure.CompositeKey\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x19\n\x11name_alternatives\x18\x03 \x03(\t\x12\x0b\n\x03url\x18\x04 \x01(\t\x12\x13\n\x0bgeom_center\x18\x05 \x01(\t\x12\x11\n\tgeom_area\x18\x06 \x01(\t\"\xc8\x04\n\x0cPostReaction\x12*\n\x04pkey\x18\x01 \x01(\x0b\x32\x1c.lbsn.structure.CompositeKey\x12/\n\tuser_pkey\x18\x02 \x01(\x0b\x32\x1c.lbsn.structure.CompositeKey\x12\x39\n\x13referencedPost_pkey\x18\x03 \x01(\x0b\x32\x1c.lbsn.structure.CompositeKey\x12\x41\n\x1breferencedPostreaction_pkey\x18\x04 \x01(\x0b\x32\x1c.lbsn.structure.CompositeKey\x12\x17\n\x0freaction_latlng\x18\x05 \x01(\t\x12@\n\rreaction_type\x18\x06 \x01(\x0e\x32).lbsn.structure.PostReaction.ReactionType\x12\x31\n\rreaction_date\x18\x07 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x18\n\x10reaction_content\x18\x08 \x01(\t\x12\x1b\n\x13reaction_like_count\x18\t \x01(\x03\x12\x38\n\x12user_mentions_pkey\x18\n \x03(\x0b\x32\x1c.lbsn.structure.CompositeKey\"^\n\x0cReactionType\x12\x0b\n\x07UNKNOWN\x10\x00\x12\t\n\x05SHARE\x10\x01\x12\x0b\n\x07\x43OMMENT\x10\x02\x12\t\n\x05QUOTE\x10\x03\x12\x08\n\x04LIKE\x10\x04\x12\t\n\x05\x45MOJI\x10\x05\x12\t\n\x05OTHER\x10\x06\"\xc1\x02\n\x0cRelationship\x12-\n\x04pkey\x18\x01 \x01(\x0b\x32\x1f.lbsn.structure.RelationshipKey\x12H\n\x11relationship_type\x18\x02 \x01(\x0e\x32-.lbsn.structure.Relationship.RelationshipType\"\xb7\x01\n\x10RelationshipType\x12\x0b\n\x07UNKNOWN\x10\x00\x12\x0c\n\x08isFRIEND\x10\x01\x12\x0f\n\x0bisCONNECTED\x10\x02\x12\x0b\n\x07isEQUAL\x10\x03\x12\x0b\n\x07inGROUP\x10\x04\x12\x10\n\x0c\x66ollowsGROUP\x10\x05\x12\x0f\n\x0binCOMMUNITY\x10\x06\x12\x11\n\rMENTIONS_USER\x10\x07\x12\x0e\n\nhasHASHTAG\x10\x08\x12\x0c\n\x08hasEMOJI\x10\t\x12\t\n\x05OTHER\x10\n\"J\n\x08Language\x12\x16\n\x0elanguage_short\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x18\n\x10language_name_de\x18\x03 \x01(\t\"\xc9\x05\n\x05\x45vent\x12*\n\x04pkey\x18\x01 \x01(\x0b\x32\x1c.lbsn.structure.CompositeKey\x12\x0c\n\x04name\x18\x02 \x01(\t\x12.\n\nevent_date\x18\x03 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x34\n\x10\x65vent_date_start\x18\x04 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x32\n\x0e\x65vent_date_end\x18\x05 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12+\n\x08\x64uration\x18\x06 \x01(\x0b\x32\x19.google.protobuf.Duration\x12\x14\n\x0c\x65vent_latlng\x18\x07 \x01(\t\x12\x12\n\nevent_area\x18\x08 \x01(\t\x12\x30\n\nplace_pkey\x18\t \x01(\x0b\x32\x1c.lbsn.structure.CompositeKey\x12/\n\tcity_pkey\x18\n \x01(\x0b\x32\x1c.lbsn.structure.CompositeKey\x12\x32\n\x0c\x63ountry_pkey\x18\x0b \x01(\x0b\x32\x1c.lbsn.structure.CompositeKey\x12/\n\tuser_pkey\x18\x0c \x01(\x0b\x32\x1c.lbsn.structure.CompositeKey\x12\x19\n\x11\x65vent_description\x18\r \x01(\t\x12\x15\n\revent_website\x18\x0e \x01(\t\x12\x12\n\nevent_type\x18\x0f \x01(\t\x12\x19\n\x11\x65vent_share_count\x18\x10 \x01(\x03\x12\x18\n\x10\x65vent_like_count\x18\x11 \x01(\x03\x12\x1b\n\x13\x65vent_comment_count\x18\x12 \x01(\x03\x12\x19\n\x11\x65vent_views_count\x18\x13 \x01(\x03\x12\x1a\n\x12\x65vent_engage_count\x18\x14 \x01(\x03\x62\x06proto3')
   ,
-  dependencies=[google_dot_protobuf_dot_timestamp__pb2.DESCRIPTOR,])
+  dependencies=[google_dot_protobuf_dot_timestamp__pb2.DESCRIPTOR,google_dot_protobuf_dot_duration__pb2.DESCRIPTOR,])
 
 
 
@@ -60,8 +61,8 @@ _ORIGIN_ORIGINID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=163,
-  serialized_end=256,
+  serialized_start=195,
+  serialized_end=288,
 )
 _sym_db.RegisterEnumDescriptor(_ORIGIN_ORIGINID)
 
@@ -94,8 +95,8 @@ _POST_POSTGEOACCURACY = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=1375,
-  serialized_end=1451,
+  serialized_start=1407,
+  serialized_end=1483,
 )
 _sym_db.RegisterEnumDescriptor(_POST_POSTGEOACCURACY)
 
@@ -124,8 +125,8 @@ _POST_POSTTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=1453,
-  serialized_end=1506,
+  serialized_start=1485,
+  serialized_end=1538,
 )
 _sym_db.RegisterEnumDescriptor(_POST_POSTTYPE)
 
@@ -166,8 +167,8 @@ _POSTREACTION_REACTIONTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=3528,
-  serialized_end=3622,
+  serialized_start=3583,
+  serialized_end=3677,
 )
 _sym_db.RegisterEnumDescriptor(_POSTREACTION_REACTIONTYPE)
 
@@ -224,8 +225,8 @@ _RELATIONSHIP_RELATIONSHIPTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=3763,
-  serialized_end=3946,
+  serialized_start=3818,
+  serialized_end=4001,
 )
 _sym_db.RegisterEnumDescriptor(_RELATIONSHIP_RELATIONSHIPTYPE)
 
@@ -264,8 +265,8 @@ _ORIGIN = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=87,
-  serialized_end=256,
+  serialized_start=119,
+  serialized_end=288,
 )
 
 
@@ -302,8 +303,8 @@ _COMPOSITEKEY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=258,
-  serialized_end=324,
+  serialized_start=290,
+  serialized_end=356,
 )
 
 
@@ -340,8 +341,8 @@ _RELATIONSHIPKEY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=326,
-  serialized_end=447,
+  serialized_start=358,
+  serialized_end=479,
 )
 
 
@@ -548,8 +549,8 @@ _POST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=450,
-  serialized_end=1506,
+  serialized_start=482,
+  serialized_end=1538,
 )
 
 
@@ -719,8 +720,8 @@ _USER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1509,
-  serialized_end=2054,
+  serialized_start=1541,
+  serialized_end=2086,
 )
 
 
@@ -785,8 +786,8 @@ _USERGROUP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2057,
-  serialized_end=2302,
+  serialized_start=2089,
+  serialized_end=2334,
 )
 
 
@@ -902,6 +903,13 @@ _PLACE = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='parent_places', full_name='lbsn.structure.Place.parent_places', index=15,
+      number=16, type=9, cpp_type=9, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -914,8 +922,8 @@ _PLACE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2305,
-  serialized_end=2668,
+  serialized_start=2337,
+  serialized_end=2723,
 )
 
 
@@ -994,8 +1002,8 @@ _CITY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2671,
-  serialized_end=2885,
+  serialized_start=2726,
+  serialized_end=2940,
 )
 
 
@@ -1060,8 +1068,8 @@ _COUNTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2888,
-  serialized_end=3035,
+  serialized_start=2943,
+  serialized_end=3090,
 )
 
 
@@ -1155,8 +1163,8 @@ _POSTREACTION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3038,
-  serialized_end=3622,
+  serialized_start=3093,
+  serialized_end=3677,
 )
 
 
@@ -1194,8 +1202,8 @@ _RELATIONSHIP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3625,
-  serialized_end=3946,
+  serialized_start=3680,
+  serialized_end=4001,
 )
 
 
@@ -1239,8 +1247,172 @@ _LANGUAGE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3948,
-  serialized_end=4022,
+  serialized_start=4003,
+  serialized_end=4077,
+)
+
+
+_EVENT = _descriptor.Descriptor(
+  name='Event',
+  full_name='lbsn.structure.Event',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='pkey', full_name='lbsn.structure.Event.pkey', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='name', full_name='lbsn.structure.Event.name', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='event_date', full_name='lbsn.structure.Event.event_date', index=2,
+      number=3, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='event_date_start', full_name='lbsn.structure.Event.event_date_start', index=3,
+      number=4, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='event_date_end', full_name='lbsn.structure.Event.event_date_end', index=4,
+      number=5, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='duration', full_name='lbsn.structure.Event.duration', index=5,
+      number=6, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='event_latlng', full_name='lbsn.structure.Event.event_latlng', index=6,
+      number=7, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='event_area', full_name='lbsn.structure.Event.event_area', index=7,
+      number=8, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='place_pkey', full_name='lbsn.structure.Event.place_pkey', index=8,
+      number=9, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='city_pkey', full_name='lbsn.structure.Event.city_pkey', index=9,
+      number=10, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='country_pkey', full_name='lbsn.structure.Event.country_pkey', index=10,
+      number=11, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='user_pkey', full_name='lbsn.structure.Event.user_pkey', index=11,
+      number=12, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='event_description', full_name='lbsn.structure.Event.event_description', index=12,
+      number=13, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='event_website', full_name='lbsn.structure.Event.event_website', index=13,
+      number=14, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='event_type', full_name='lbsn.structure.Event.event_type', index=14,
+      number=15, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='event_share_count', full_name='lbsn.structure.Event.event_share_count', index=15,
+      number=16, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='event_like_count', full_name='lbsn.structure.Event.event_like_count', index=16,
+      number=17, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='event_comment_count', full_name='lbsn.structure.Event.event_comment_count', index=17,
+      number=18, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='event_views_count', full_name='lbsn.structure.Event.event_views_count', index=18,
+      number=19, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='event_engage_count', full_name='lbsn.structure.Event.event_engage_count', index=19,
+      number=20, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=4080,
+  serialized_end=4793,
 )
 
 _ORIGIN.fields_by_name['origin_id'].enum_type = _ORIGIN_ORIGINID
@@ -1283,6 +1455,15 @@ _POSTREACTION_REACTIONTYPE.containing_type = _POSTREACTION
 _RELATIONSHIP.fields_by_name['pkey'].message_type = _RELATIONSHIPKEY
 _RELATIONSHIP.fields_by_name['relationship_type'].enum_type = _RELATIONSHIP_RELATIONSHIPTYPE
 _RELATIONSHIP_RELATIONSHIPTYPE.containing_type = _RELATIONSHIP
+_EVENT.fields_by_name['pkey'].message_type = _COMPOSITEKEY
+_EVENT.fields_by_name['event_date'].message_type = google_dot_protobuf_dot_timestamp__pb2._TIMESTAMP
+_EVENT.fields_by_name['event_date_start'].message_type = google_dot_protobuf_dot_timestamp__pb2._TIMESTAMP
+_EVENT.fields_by_name['event_date_end'].message_type = google_dot_protobuf_dot_timestamp__pb2._TIMESTAMP
+_EVENT.fields_by_name['duration'].message_type = google_dot_protobuf_dot_duration__pb2._DURATION
+_EVENT.fields_by_name['place_pkey'].message_type = _COMPOSITEKEY
+_EVENT.fields_by_name['city_pkey'].message_type = _COMPOSITEKEY
+_EVENT.fields_by_name['country_pkey'].message_type = _COMPOSITEKEY
+_EVENT.fields_by_name['user_pkey'].message_type = _COMPOSITEKEY
 DESCRIPTOR.message_types_by_name['Origin'] = _ORIGIN
 DESCRIPTOR.message_types_by_name['CompositeKey'] = _COMPOSITEKEY
 DESCRIPTOR.message_types_by_name['RelationshipKey'] = _RELATIONSHIPKEY
@@ -1295,6 +1476,7 @@ DESCRIPTOR.message_types_by_name['Country'] = _COUNTRY
 DESCRIPTOR.message_types_by_name['PostReaction'] = _POSTREACTION
 DESCRIPTOR.message_types_by_name['Relationship'] = _RELATIONSHIP
 DESCRIPTOR.message_types_by_name['Language'] = _LANGUAGE
+DESCRIPTOR.message_types_by_name['Event'] = _EVENT
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 Origin = _reflection.GeneratedProtocolMessageType('Origin', (_message.Message,), {
@@ -1380,6 +1562,13 @@ Language = _reflection.GeneratedProtocolMessageType('Language', (_message.Messag
   # @@protoc_insertion_point(class_scope:lbsn.structure.Language)
   })
 _sym_db.RegisterMessage(Language)
+
+Event = _reflection.GeneratedProtocolMessageType('Event', (_message.Message,), {
+  'DESCRIPTOR' : _EVENT,
+  '__module__' : 'lbsnstructure.lbsnstructure_pb2'
+  # @@protoc_insertion_point(class_scope:lbsn.structure.Event)
+  })
+_sym_db.RegisterMessage(Event)
 
 
 # @@protoc_insertion_point(module_scope)
