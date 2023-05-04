@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v1.0.3 (2023-05-04)
+### Fix
+* Make objects available in top-level namespace ([`9acb38b`](https://github.com/Sieboldianus/lbsnstructure-python/commit/9acb38b31544958daafc67ab358acd0e1cb1d4b1))
+
 ## v1.0.2 (2023-05-04)
 ### Fix
 * Version import path ([`4a11a9a`](https://github.com/Sieboldianus/lbsnstructure-python/commit/4a11a9a1a2bd498c8b2c9b2654752b1f6ffadb90))
