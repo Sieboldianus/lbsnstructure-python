@@ -26,6 +26,8 @@ release:
 
 pages:
   stage: deploy
+  script:
+    - echo "Publishing on ${REL_NAMESPACE}"
   artifacts:
     paths:
     - public
