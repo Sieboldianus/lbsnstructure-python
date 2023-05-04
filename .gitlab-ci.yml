@@ -1,7 +1,3 @@
-variables:
-  # relative namespace of project
-  REL_NAMESPACE: "structure/python/"
-
 release:
   image: python:latest
   before_script:
@@ -15,8 +11,8 @@ release:
     - echo "Version for badges $version_var"
     - anybadge -l version --value="${version_var::-1}" --file=version.svg --color=green
     # create folder public for badges
-    - mkdir -p "public/${REL_NAMESPACE}"
-    - cp *.svg "public/${REL_NAMESPACE}"
+    - mkdir -p "public"
+    - cp *.svg "public/"
   artifacts:
     name: pages
     paths:
@@ -27,7 +23,7 @@ release:
 pages:
   stage: deploy
   script:
-    - echo "Publishing on ${REL_NAMESPACE}"
+    - echo "Publishing on https://lbsn.vgiscience.org/structure/python"
   artifacts:
     paths:
     - public
