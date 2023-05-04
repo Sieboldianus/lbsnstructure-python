@@ -9,7 +9,7 @@ release:
     - version_str=$(git describe --tags $(git rev-list --tags --max-count=1))
     - version_var=$(echo $version_str | grep -E 'v[0-9].[0-9].[0-9]' | tail -n 1 | cut -c2-)
     - echo "Version for badges $version_var"
-    - anybadge -l version --value="${version_var::-1}" --file=version.svg --color=green
+    - anybadge -l version --value="${version_var}" --file=version.svg --color=green
     # create folder public for badges
     - mkdir -p "public"
     - cp *.svg "public/"
