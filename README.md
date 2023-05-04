@@ -1,5 +1,4 @@
-![pypi version](https://lbsn.vgiscience.org/structure/python/version.svg) ![from protobuf version](https://lbsn.vgiscience.org/structure/protobuf/version.svg)  
-[![pipeline status](https://gitlab.vgiscience.de/lbsn/structure/protobuf/badges/master/pipeline.svg)](https://gitlab.vgiscience.de/lbsn/structure/protobuf/-/commits/master)
+![pypi version](https://lbsn.vgiscience.org/structure/python/version.svg) ![from protobuf version](https://lbsn.vgiscience.org/structure/protobuf/version.svg) [pipeline status](https://gitlab.vgiscience.de/lbsn/structure/protobuf/badges/master/pipeline.svg)
 
 # LBSNSTRUCTURE
 
