@@ -16,8 +16,9 @@ pip install --upgrade lbsnstructure
 
 Import to python projecty with:  
 ```python
-import lbsnstructure
-from lbsnstructure.lbsnstructure_pb2 import lbsnPost
+import lbsnstructure as lbsn
+post = lbsn.Post()
+place = lbsn.Place()
 ```
 
 .. or compile newest version from [Protofiles](https://gitlab.vgiscience.de/lbsn/concept)
@@ -31,13 +32,13 @@ from lbsnstructure.lbsnstructure_pb2 import lbsnPost
 
 For development & testing, make a local clone of this repository  
 ```shell
-git clone git@gitlab.vgiscience.de:lbsn/concept.git
+git clone git@gitlab.vgiscience.de:lbsn/structure/python.git
 ```
 
 Go to subfolder `examples\python` and (e.g.) symlink the folder to your  
 Python's site-packages folder with:  
 ```shell
-python setup.py develop
+pip install --editable .
 ```
 
 Now, lbsnstructure should be available through your python path and directly link to the local git clone directory.
