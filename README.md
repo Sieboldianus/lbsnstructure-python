@@ -17,7 +17,7 @@ Install with:
 pip install --upgrade lbsnstructure
 ```
 
-Import to python projecty with:  
+Import to python project with:  
 ```python
 import lbsnstructure as lbsn
 post = lbsn.Post()
