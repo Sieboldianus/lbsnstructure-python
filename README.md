@@ -7,6 +7,9 @@ There are several motivations for prividing a common LBSN interchange data struc
 While there are attempts by Google, Facebook etc. (see [data-transfer-project](https://github.com/google/data-transfer-project)), it is not currently possible. With this structure concept, we follow an independent road.
 A primary goal is to systematically characterize LBSN data aspects in a common scheme that enables privacy-by-design for connected software, transfer scripts and database design.
 
+The Github-repository of this protobuf-derived package can be found here:
+https://github.com/Sieboldianus/lbsnstructure-python
+
 ## Quick Start
 
 Install with:  
