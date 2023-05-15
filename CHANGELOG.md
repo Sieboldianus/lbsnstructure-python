@@ -2,6 +2,15 @@
 
 <!--next-version-placeholder-->
 
+## v1.2.0 (2023-05-15)
+### Feature
+* Transition to pyproject.toml ([`af17d8a`](https://github.com/Sieboldianus/lbsnstructure-python/commit/af17d8adf9f4b75ae0dfc28b21b0bcacdedadab0))
+* Add pyi mypy type hints ([`404771b`](https://github.com/Sieboldianus/lbsnstructure-python/commit/404771bc22eddefe882e5532c663cd30731eb0ed))
+
+### Fix
+* Path reference to version variable ([`8a0492f`](https://github.com/Sieboldianus/lbsnstructure-python/commit/8a0492f25c0c88dc4f49c9624c6cd332b33aac03))
+* Explicitly defined exported symbols ([`53d588f`](https://github.com/Sieboldianus/lbsnstructure-python/commit/53d588fdf50e3db7e1fde7994ce9d941e04f3aa4))
+
 ## v1.1.0 (2023-05-12)
 ### Documentation
 * Fix pipeline badge url ([`0d4656e`](https://github.com/Sieboldianus/lbsnstructure-python/commit/0d4656e30ea3daaddd633348a2cfb169948f18b4))
