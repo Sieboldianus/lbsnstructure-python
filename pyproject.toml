@@ -21,7 +21,7 @@ content-type = "text/markdown"
 Homepage = "https://lbsn.vgiscience.org/"
 
 [tool.semantic_release]
-version_variable = "lbsnstructure/version.py:__version__"
+version_variable = "src/lbsnstructure/version.py:__version__"
 upload_to_pypi = "true"
 branch = "master"
 build_command = "python -m build"
