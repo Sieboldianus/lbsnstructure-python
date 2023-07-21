@@ -67,9 +67,10 @@ class Origin(google.protobuf.message.Message):
         TIKTOK: Origin._OriginID.ValueType  # 19
         TELEGRAM: Origin._OriginID.ValueType  # 20
         GAB: Origin._OriginID.ValueType  # 21
-        IBIRD: Origin._OriginID.ValueType  # 22
+        EBIRD: Origin._OriginID.ValueType  # 22
         INATURALIST: Origin._OriginID.ValueType  # 23
         ISPOTNATURE: Origin._OriginID.ValueType  # 24
+        TRIPADVISOR: Origin._OriginID.ValueType  # 25
 
     class OriginID(_OriginID, metaclass=_OriginIDEnumTypeWrapper):
         """
@@ -99,9 +100,10 @@ class Origin(google.protobuf.message.Message):
     TIKTOK: Origin.OriginID.ValueType  # 19
     TELEGRAM: Origin.OriginID.ValueType  # 20
     GAB: Origin.OriginID.ValueType  # 21
-    IBIRD: Origin.OriginID.ValueType  # 22
+    EBIRD: Origin.OriginID.ValueType  # 22
     INATURALIST: Origin.OriginID.ValueType  # 23
     ISPOTNATURE: Origin.OriginID.ValueType  # 24
+    TRIPADVISOR: Origin.OriginID.ValueType  # 25
 
     ORIGIN_ID_FIELD_NUMBER: builtins.int
     NAME_FIELD_NUMBER: builtins.int
