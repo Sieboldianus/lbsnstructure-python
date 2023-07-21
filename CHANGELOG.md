@@ -2,6 +2,13 @@
 
 <!--next-version-placeholder-->
 
+## v1.3.0 (2023-07-21)
+### Feature
+* Fix eBird correct naming, add Tripadvisor origin ([`7f49564`](https://github.com/Sieboldianus/lbsnstructure-python/commit/7f4956403a37abb2d8663166cab644ece4089275))
+
+### Documentation
+* Add reference to Github ([`abd80e4`](https://github.com/Sieboldianus/lbsnstructure-python/commit/abd80e41f3c18af533dc2b7cf0ed339dff493112))
+
 ## v1.2.0 (2023-05-15)
 ### Feature
 * Transition to pyproject.toml ([`af17d8a`](https://github.com/Sieboldianus/lbsnstructure-python/commit/af17d8adf9f4b75ae0dfc28b21b0bcacdedadab0))
